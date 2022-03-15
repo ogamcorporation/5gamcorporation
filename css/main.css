@@ -1,0 +1,371 @@
+@charset "UTF-8";
+h2 {
+  font-family: GMarket;
+  font-size: 250px;
+}
+
+h3 {
+  font-family: 'Roboto Condensed';
+  font-size: 40px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 16px 14px;
+  margin-bottom: 36px;
+  letter-spacing: -2px;
+  line-height: 30px;
+}
+
+.section1 .swiper-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.section1 .swiper-container .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+.section1 .swiper-container .swiper-button-prev,
+.section1 .swiper-container .swiper-button-next {
+  width: 90px;
+  height: 90px;
+}
+
+.section1 .swiper-container .swiper-button-prev {
+  left: 60px;
+}
+
+.section1 .swiper-container .swiper-button-next {
+  right: 60px;
+}
+
+.section1 .swiper-container .swiper-button-prev:after,
+.section1 .swiper-container .swiper-button-next:after {
+  content: '';
+  background: url("../img/icon_arrow.png") no-repeat top left/cover;
+  width: 35px;
+  height: 57px;
+}
+
+.section1 .swiper-container .swiper-button-next:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.dashed {
+  stroke-dasharray: 4;
+  stroke: #F9F9F9;
+}
+
+.path {
+  stroke-dasharray: 2702.5;
+  stroke-dashoffset: 2702.5;
+  stroke: #000;
+  -webkit-animation: dash 5s forwards;
+          animation: dash 5s forwards;
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 2702.5;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 2702.5;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.section2 {
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.section2 .movetxt {
+  margin: 200px 0 92px 0;
+}
+
+.section2 .movetxt .to_left {
+  position: relative;
+  left: 0;
+}
+
+.section2 .movetxt .to_right {
+  position: relative;
+  right: 0;
+  text-align: right;
+}
+
+.section2 .road1 {
+  position: relative;
+  margin-bottom: 36px;
+  padding: 0 160px 0 102px;
+}
+
+.section2 .infinite {
+  position: absolute;
+  top: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 48px;
+  max-width: 100%;
+}
+
+.section2 .infinite .infin_logo {
+  background: url(../img/infinite_logo.png) repeat 0 0/contain;
+  height: 62px;
+  width: 100vw;
+  -webkit-animation: infin 15s linear infinite;
+  animation: infin 15s linear infinite;
+}
+
+@-webkit-keyframes infin {
+  100% {
+    background-position: -100vw 0;
+  }
+}
+
+@keyframes infin {
+  100% {
+    background-position: -100vw 0;
+  }
+}
+
+.section3, .section4, .section5 {
+  padding: 0 56px;
+}
+
+.section3 .hire_cnt {
+  font-family: GMarket;
+  width: 100%;
+  height: 80vh;
+  background-color: #E1DFDF;
+  padding-top: 12%;
+}
+
+.section3 .hire_cnt .txt_wrap {
+  border: 5px solid #171111;
+  background-color: #FFFFFF;
+  border-radius: 100px;
+  width: 1010px;
+  height: 364px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 127px;
+}
+
+.section3 .hire_cnt .txt_wrap strong {
+  font-family: 'Roboto Condensed';
+  font-size: 100px;
+  height: 110px;
+}
+
+.section3 .hire_cnt .txt_wrap .typed::after {
+  position: relative;
+  top: -4px;
+  content: '|';
+  display: inline-block;
+  -webkit-animation: blink 0.7s infinite;
+          animation: blink 0.7s infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.section3 .hire_cnt .txt_wrap .typed-cursor {
+  opacity: 0;
+  display: none;
+}
+
+.section3 .hire_cnt .txt_right {
+  text-align: right;
+  font-size: 20px;
+  margin-right: 142px;
+  padding-top: 42px;
+  line-height: 30px;
+}
+
+.section3 .hire_cnt .txt_right p {
+  height: 30px;
+  overflow: hidden;
+}
+
+.section3 .hire_cnt .txt_right p span {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.section3 .hire_cnt h4 {
+  text-align: center;
+  padding-top: 62px;
+  font-size: 40px;
+}
+
+.section4 {
+  position: relative;
+}
+
+.section4 .road2 {
+  padding: 20px 91.5px 36px 59px;
+}
+
+.section4 .movetxt {
+  position: absolute;
+  top: 45px;
+  right: 0;
+}
+
+.section4 .movetxt h2 {
+  margin: 228px 0 193px 0;
+  text-align: right;
+  cursor: pointer;
+}
+
+.section4 .movetxt h2:hover p, .section4 .movetxt h2:focus p, .section4 .movetxt h2:hover span:last-child, .section4 .movetxt h2:focus span:last-child {
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+}
+
+.section4 .movetxt h2 span:first-child {
+  display: inline-block;
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.section5 .sticky_wrap {
+  height: calc(14500px - 70vh);
+  /* sticky 속성 하단 컨텐츠가 빨리 올라올수 있도록 제어 */
+}
+
+.section5 .sticky_wrap .sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 200px;
+  width: 100%;
+  height: 100vh;
+}
+
+.section5 .sticky_wrap .sticky .hor_long {
+  position: absolute;
+  top: 102px;
+  width: 14500px;
+  overflow-y: hidden;
+}
+
+.section5 .sticky_wrap .sticky ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section5 .sticky_wrap .sticky ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin-right: 44px;
+}
+
+.section5 img {
+  width: 800px;
+  height: 800px;
+}
+
+.section6 h2 .to_left {
+  position: relative;
+  left: 0;
+}
+
+.section6 h2 p::after {
+  content: "";
+  display: block;
+  border: 1px dashed #000;
+}
+
+.section6 .client_wrap {
+  margin-top: 102px;
+}
+
+.section6 .client_list {
+  background: url(../img/bg_paper.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+  padding: 124px 56px 268px 56px;
+  margin-bottom: 200px;
+}
+
+.section6 ul {
+  max-width: 1808px;
+  margin: 0 auto;
+  font-size: 0;
+  padding-bottom: 136px;
+}
+
+.section6 ul li {
+  display: inline-block;
+  margin: 0 3% 0 3%;
+  margin-top: 56px;
+  width: calc(25% - 6%);
+}
+
+.section6 ul li img {
+  max-height: 213px;
+  max-width: 100%;
+}
+
+.section6 ul li:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+.section6 .btn_more {
+  width: 100%;
+}
+
+.section6 .btn_more p {
+  font-family: spoqa;
+  font-size: 20px;
+  border: 0.8px dashed #000;
+  border-radius: 20px;
+  padding: 22.5px 57px;
+  width: 169px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=main.css.map */

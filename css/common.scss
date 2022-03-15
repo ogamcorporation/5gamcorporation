@@ -1,0 +1,300 @@
+@charset "utf-8";
+@import "_var", "_mixin";
+
+
+/* font-family */
+@font-face {
+  font-family: GMarket;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Gmarket Sans Light"), local("GmarketSans-Light"),
+  url("../font/Gmarket_Sans/GmarketSansLight.otf") format("opentype"),
+  url("../font/Gmarket_Sans/GmarketSansTTFLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: GMarket;
+  font-style: normal;
+  font-weight: 500;
+  src: local("Gmarket Sans Medium"), local("GmarketSans-Medium"),
+  url("../font/Gmarket_Sans/GmarketSansMedium.otf") format("opentype"),
+  url("../font/Gmarket_Sans/GmarketSansTTFMedium.ttf") format("truetype");
+}
+@font-face {
+  font-family: GMarket;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Gmarket Sans Bold"), local("GmarketSans-Bold"),
+  url("../font/Gmarket_Sans/GmarketSansBold.otf") format("opentype"),
+  url("../font/Gmarket_Sans/GmarketSansTTFBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IBM;
+  font-style: normal;
+  font-weight: 400;
+  src: local("IBM_Plex_Sans"),
+  url("../font/IBM_Plex_Sans/IBMPlexSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: spoqa;
+  font-style: normal;
+  font-weight: 300;
+  src: local("SpoqaHanSans"),
+  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Light.otf") format("opentype"),
+  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: spoqa;
+  font-style: normal;
+  font-weight: 400;
+  src: local("SpoqaHanSans"),
+  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Regular.otf") format("opentype"),
+  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: spoqa;
+  font-style: normal;
+  font-weight: 500;
+  src: local("SpoqaHanSans"),
+  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Medium.otf") format("opentype"),
+  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: spoqa;
+  font-style: normal;
+  font-weight: 700;
+  src: local("SpoqaHanSans"),
+  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Bold.otf") format("opentype"),
+  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Bold.ttf") format("truetype");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+
+// tag reset
+body, h1, h2, h3, h4, h5, h6, p, ul, button, input[type="text"]{margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6,strong{font-size: 100%;font-weight: inherit;}
+ul{list-style: none;}
+a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
+img{vertical-align: top;}
+button{border: none;background: none;cursor: pointer;}
+input[type="text"]{border: 1px solid #aaa;border-radius: 0;}
+button, input{font-family: inherit;font-size: inherit;color: inherit;}
+address{font-style: normal;}
+header, nav, section, footer{display: block;}
+.blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+
+// common class
+body{
+  font-family: spoqa, sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;word-break: keep-all;
+  background-color: #F9F9F9;
+  *{box-sizing: border-box;}
+}
+
+// skip navigation
+#skip a{
+  position: absolute;top: 0;left: -9999px;z-index: 1000;color: #fff;
+  &:focus{left: 0;width: 100%;height: 50px;line-height: 50px;font-weight: 700;background: #171111;text-align: center;}
+}
+
+// header
+.header{
+  @include flex;
+  @include align-items;
+  @include justify-content(space-between);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 178px;
+  padding: 0 56px;
+  .logo{
+    color: #000;
+    svg{
+      width: 250px;
+      height: 30px;
+    }
+    p{
+      margin-top: 8px;
+      font-family: IBM;
+    }
+  }
+  .nav_btn{
+    position: relative;
+    width: 52px;
+    height: 52px;
+    background: #000;
+    border-radius: 10px;
+    &.on #dim{
+      display: block;
+    }
+    .line{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      @include translateX-50;
+      width: 25px;
+      height: 2px;
+      background: #fff;
+    }
+    .line1{
+      top: 35%;
+    }
+    .line2{
+      top: 50%;
+    }
+    .line3{
+      top: 65%;
+    }
+  }
+  #dim{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.65);
+    display: none;
+  }
+  #gnb{
+    position: fixed;
+    top: 0;
+    right: -391px;
+    z-index: 1200;
+    width: 391px;
+    height: 100%;
+    font-family: 'Roboto Condensed';
+    color: #fff;
+    background: #000;
+    padding-top: 75px;
+    visibility: hidden;
+    .arrow{
+      position: absolute;
+      right: 77px;
+      width: 52px;
+      height: 52px;
+      padding-top: 7px;
+      cursor:pointer;
+      div{
+        background: url(../img/icon_arrow_w.png) no-repeat center / cover;
+        width: 21.5px;
+        height: 36.14px;
+        margin: 0 auto;
+      }
+    }
+    ul{
+      text-align: center;
+      margin-top: 151px;
+      li{
+        margin: 0 auto;
+        &:not(:first-child){
+          margin-top: 44px;
+        }
+        a{
+          width: 237px;
+          display: inline-block;
+          border: 2px solid #fff;
+          font-size: 30px;
+          border-radius: 20px;
+          padding: 16px 0;
+        }
+      }
+    }
+  }
+}
+
+// footer
+footer{
+  @include flex;
+  @include justify-content(space-between);
+  overflow: hidden;
+  background: #000;
+  width: 100%;
+  height: 346px;
+  color: #fff;
+  font-family: spoqa;
+  font-weight: 300;
+  font-size: 14px;
+
+  .txt{
+    padding: 56px 0 0 56px;
+    .logo2{
+      svg{
+        width: 98px;
+        height: 58px;
+      }
+    }
+    address{
+      margin-top: 20px;
+      p:not(:first-child){
+        margin-top: 15px;
+      }
+      p.copyright{
+        margin-top: 24px;
+      }
+    }
+  }
+  .illust{
+    width: 373px;
+    margin-top: 36px;
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    @include animation(illustAni 5s cubic-bezier(0.25, 0.15, 0.25, 0.7) forwards);
+    @include keyframes (illustAni) {
+      0%{
+        stroke-dashoffset: 900;
+      }
+      50%{
+        stroke-dashoffset: 550;
+      }
+      100%{
+        stroke-dashoffset: 0;
+      }
+    }
+
+  }
+}
+
+
+/* fade effect 추가 */
+.fade .fade_up, .fade .fade_down, .fade .fade_right, .fade .fade_left{
+  opacity: 0;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.fade .fade_up{
+  transform: translate(0, 100px);
+}
+.fade .fade_down{
+  transform: translate(0, -100px);
+}
+.fade .fade_right{
+  transform: translate(-100px, 0);
+}
+.fade .fade_left{
+  transform: translate(100px, 0);
+}
+.fade.on .fade_up, .fade.on .fade_down, .fade.on .fade_right, .fade.on .fade_left{
+  opacity: 1;transform: translate(0, 0);
+}
+.delay-3{
+  transition-delay: 0.3s !important;
+}
+.delay-6{
+  transition-delay: 0.6s !important;}
+.delay-9{transition-delay: 0.9s !important;
+}
+.delay-12{
+  transition-delay: 1.2s !important;
+}
+.delay-15{
+  transition-delay: 1.5s !important;
+}
