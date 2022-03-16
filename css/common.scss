@@ -199,6 +199,10 @@ html{
         &:not(:first-child){
           margin-top: 44px;
         }
+        &:hover a, &:focus a{
+          color: #000;
+          background-color: #fff;
+        }
         a{
           width: 237px;
           display: inline-block;

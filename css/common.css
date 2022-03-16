@@ -275,6 +275,11 @@ html {
   margin-top: 44px;
 }
 
+.header #gnb ul li:hover a, .header #gnb ul li:focus a {
+  color: #000;
+  background-color: #fff;
+}
+
 .header #gnb ul li a {
   width: 237px;
   display: inline-block;

@@ -232,12 +232,12 @@ h3{
       position: sticky;
       top: 200px;
       width: 100%;
-      height: 100vh;
+      height: 70vh;
+      overflow: hidden;
       .hor_long{
         position: absolute;
         top: 102px;
         width: 11100px;
-        overflow-x: hidden;
       }
       ul{
         @include flex;
@@ -251,7 +251,6 @@ h3{
     }
   }
   
-
   img{
     width: 600px;
     height: 600px;
@@ -261,6 +260,7 @@ h3{
 .section6{
   overflow: hidden;
   h2 .to_left{
+    white-space: nowrap; 
     position: relative;
     left: 0;
   }
