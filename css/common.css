@@ -321,6 +321,9 @@ footer .txt address p.copyright {
 footer .illust {
   width: 373px;
   margin-top: 36px;
+}
+
+footer .illust.on {
   stroke-dasharray: 900;
   stroke-dashoffset: 900;
   -webkit-animation: illustAni 5s cubic-bezier(0.25, 0.15, 0.25, 0.7) forwards;

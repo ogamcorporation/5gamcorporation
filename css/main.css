@@ -57,17 +57,20 @@ h3 {
           transform: rotate(180deg);
 }
 
-.dashed {
+.road.on .dashed {
   stroke-dasharray: 4;
   stroke: #F9F9F9;
 }
 
-.path {
+.road.on .path {
   stroke-dasharray: 2702.5;
   stroke-dashoffset: 2702.5;
   stroke: #000;
-  -webkit-animation: dash 5s forwards;
-          animation: dash 5s forwards;
+}
+
+.road.on .path {
+  -webkit-animation: dash 7s forwards;
+          animation: dash 7s forwards;
 }
 
 @-webkit-keyframes dash {
@@ -268,7 +271,7 @@ h3 {
 }
 
 .section5 .sticky_wrap {
-  height: calc(14500px - 70vh);
+  height: calc(11100px - 70vh);
   /* sticky 속성 하단 컨텐츠가 빨리 올라올수 있도록 제어 */
 }
 
@@ -283,7 +286,7 @@ h3 {
 .section5 .sticky_wrap .sticky .hor_long {
   position: absolute;
   top: 102px;
-  width: 14500px;
+  width: 11100px;
   overflow-y: hidden;
 }
 
@@ -305,8 +308,12 @@ h3 {
 }
 
 .section5 img {
-  width: 800px;
-  height: 800px;
+  width: 600px;
+  height: 600px;
+}
+
+.section6 {
+  overflow: hidden;
 }
 
 .section6 h2 .to_left {

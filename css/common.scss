@@ -243,18 +243,20 @@ footer{
   .illust{
     width: 373px;
     margin-top: 36px;
-    stroke-dasharray: 900;
-    stroke-dashoffset: 900;
-    @include animation(illustAni 5s cubic-bezier(0.25, 0.15, 0.25, 0.7) forwards);
-    @include keyframes (illustAni) {
-      0%{
-        stroke-dashoffset: 900;
-      }
-      50%{
-        stroke-dashoffset: 550;
-      }
-      100%{
-        stroke-dashoffset: 0;
+    &.on{
+      stroke-dasharray: 900;
+      stroke-dashoffset: 900;
+      @include animation(illustAni 5s cubic-bezier(0.25, 0.15, 0.25, 0.7) forwards);
+      @include keyframes (illustAni) {
+        0%{
+          stroke-dashoffset: 900;
+        }
+        50%{
+          stroke-dashoffset: 550;
+        }
+        100%{
+          stroke-dashoffset: 0;
+        }
       }
     }
 

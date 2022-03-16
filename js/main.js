@@ -67,7 +67,7 @@ $(document).ready(function () {
     $(document).on('scroll', function(){
         // 오감과 함께할 당신에게,
         $('h2 .to_left').css("left", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
-        $('.section6 h2 .to_left').css("left", Math.max(1900 - 0.1*window.scrollY, 1) + "vw");
+        $('.section6 h2 .to_left').css("left", Math.max(1450 - 0.1*window.scrollY, 1) + "vw");
         $('h2 .to_right').css("right", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
     });
 
@@ -118,6 +118,37 @@ $(document).ready(function () {
       // 하단에서 상단으로 다시 올렸을때 효과가 반복되길 바란다면 추가 
       else $(this).removeClass('on');
     });
+
+
+    // 스크롤이 근처에 도달시 애니메이션 실행
+    const scrollTop = $(this).scrollTop();
+    $('.road').each(function (idx, ele) {
+        const road1 = $('.road1').offset().top;
+        const road2 = $('.road2').offset().top;
+        if (scrollTop + 1100 >= road1) {
+            $('.road1').addClass('on');
+        } else{
+            $('.road1').removeClass('on');
+        }
+        if (scrollTop + 1100 >= road2) {
+            $('.road2').addClass('on');
+        } else{
+            $('.road2').removeClass('on');
+        }
+        console.log(scrollTop, road1);
+    });
+
+
+    $('.illust').each(function (idx, ele) {
+        const footer = $('footer').offset().top;
+        if (scrollTop + 1200 >= footer) {
+            $(this).addClass('on');
+        }
+        else{
+            $(this).removeClass('on');
+        }
+    });
+
   });
 
 
