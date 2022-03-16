@@ -149,6 +149,10 @@ body * {
   text-align: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;

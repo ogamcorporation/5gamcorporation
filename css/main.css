@@ -247,12 +247,19 @@ h3 {
 }
 
 .section4 .movetxt {
+  white-space: nowrap;
   position: absolute;
   top: 45px;
   right: 0;
 }
 
+.section4 .movetxt .parallax_txt {
+  -webkit-transition: 0.22s;
+  transition: 0.22s;
+}
+
 .section4 .movetxt h2 {
+  font-size: 100px;
   margin: 228px 0 193px 0;
   text-align: right;
   cursor: pointer;
@@ -287,7 +294,7 @@ h3 {
   position: absolute;
   top: 102px;
   width: 11100px;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .section5 .sticky_wrap .sticky ul {

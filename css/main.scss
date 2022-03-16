@@ -199,10 +199,15 @@ h3{
     padding: 20px 91.5px 36px 59px;
   }
   .movetxt{
+    white-space: nowrap; 
     position: absolute;
     top: 45px;
     right: 0;
+    .parallax_txt{
+      transition: 0.22s; 
+    }
     h2{
+      font-size: 100px;
       margin: 228px 0 193px 0;
       text-align: right;
       cursor: pointer;
@@ -232,7 +237,7 @@ h3{
         position: absolute;
         top: 102px;
         width: 11100px;
-        overflow-y: hidden;
+        overflow-x: hidden;
       }
       ul{
         @include flex;
