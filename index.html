@@ -290,30 +290,28 @@
         let timer;
         window.scroll({top : 0, behavior: 'smooth'});
         document.addEventListener('scroll', (e) =>{
+            if(!timer){
 
-if(!timer){
+                timer = setTimeout(()=>{
+                    timer = null;
 
-    timer = setTimeout(()=>{
-        timer = null;
-
-        let top = document.documentElement.scrollTop;
-        console.log(top)
-        if(window.scrollY < 3700){
-            p_ex1.style.fontSize = '100px';
-        }
-        if(window.scrollY > 3800){
-            p_ex1.style.fontSize = '150px';
-        }
-        if(window.scrollY > 3950){
-            p_ex1.style.fontSize = '200px';
-        }
-        if(window.scrollY > 4000){
-            p_ex1.style.fontSize = '250px';
-        }
-    }, 100);
-
-}
-});
+                    let top = document.documentElement.scrollTop;
+                    console.log(top)
+                    if(window.scrollY < 3400){
+                        p_ex1.style.fontSize = '100px';
+                    }
+                    if(window.scrollY > 3500){
+                        p_ex1.style.fontSize = '150px';
+                    }
+                    if(window.scrollY > 3600){
+                        p_ex1.style.fontSize = '200px';
+                    }
+                    if(window.scrollY > 3800){
+                        p_ex1.style.fontSize = '250px';
+                    }
+                }, 100);
+            }
+        });
 
 
 
