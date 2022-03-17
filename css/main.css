@@ -295,6 +295,7 @@ h3 {
   position: absolute;
   top: 102px;
   width: 11100px;
+  cursor: pointer;
 }
 
 .section5 .sticky_wrap .sticky ul {
@@ -382,5 +383,25 @@ h3 {
   padding: 22.5px 57px;
   width: 169px;
   margin: 0 auto;
+}
+
+.portfolio_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.md_cnt img:first-child {
+  width: 835px;
+  margin-right: 66px;
+}
+
+.md_cnt img:nth-child(2) {
+  width: 444px;
+  margin-right: 66px;
+}
+
+.md_cnt img:nth-child(3) {
+  width: 163px;
 }
 /*# sourceMappingURL=main.css.map */

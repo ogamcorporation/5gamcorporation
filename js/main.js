@@ -80,7 +80,10 @@ $(document).ready(function () {
     $(".typed").typed({
         strings: [
             "Design; Publishing", 
-            "Online Marketing"
+            "Online Marketing",
+            "Software Development",
+            "UI & UX Planning",
+            "QA; QC"
         ],
         typeSpeed: 100,
         loop: true,

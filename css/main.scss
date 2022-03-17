@@ -238,6 +238,7 @@ h3{
         position: absolute;
         top: 102px;
         width: 11100px;
+        cursor: pointer;
       }
       ul{
         @include flex;
@@ -312,3 +313,17 @@ h3{
   }
 }
 
+.portfolio_wrap{
+  display: flex;
+}
+.md_cnt img:first-child{
+  width: 835px;
+  margin-right: 66px;
+} 
+.md_cnt img:nth-child(2){
+  width: 444px;
+  margin-right: 66px;
+}
+.md_cnt img:nth-child(3){
+  width: 163px;
+}

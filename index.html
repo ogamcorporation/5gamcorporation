@@ -7,8 +7,8 @@
     <!-- 파비콘 -->
     <link rel="icon" href="favicon/favicon16X16.png">
     <link rel="icon" href="favicon/favicon32X32.png">
-    <link rel="apple-touch-icon" href="favicon/favicon114X114.png"><!-- 아이폰 바탕화면에 생성한 바로가기 -->
-    <link rel="shortcut icon" href="favicon/favicon96X96.png"><!-- 안드로이드폰 바탕화면에 생성한 바로가기 -->
+    <link rel="apple-touch-icon" href="favicon/favicon.png"><!-- 아이폰 바탕화면에 생성한 바로가기 114 -->
+    <link rel="shortcut icon" href="favicon/favicon.png"><!-- 안드로이드폰 바탕화면에 생성한 바로가기 96 -->
     <title>오감코퍼레이션</title>
     <!--  css  -->
     <link rel="stylesheet" href="css/swiper-bundle.css">
@@ -20,6 +20,7 @@
     <script src="js/jquery.smoothwheel.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/gsap.min.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/typed.js"></script>
     <script src="js/main.js"></script>
 
@@ -53,7 +54,7 @@
                 </p>
             </h1>
 
-            <button type="button" class="nav_btn">
+            <!-- <button type="button" class="nav_btn">
                 <span class="blind">주메뉴 열기</span>
                 <span class="line line1"></span>
                 <span class="line line2"></span>
@@ -71,7 +72,7 @@
                     <li><a href="">CLIENT</a></li>
                     <li><a href="" data-link="last">CONTACT US</a></li>
                 </ul>
-            </nav>
+            </nav> -->
         </header>
 
         <main id="main_cnt">
@@ -154,23 +155,23 @@
                             <h3>PORTFOLIO</h3>
                             <div class="hor_long">
                                 <ul>
-                                    <li><a href=""><img src="img/portfolio_nike.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_converse.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_ssf.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_gsshop.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_youngone.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_thenorthface.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_discovery.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_mlb.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_toryburch.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_thombrown.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_amore.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_toun28.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_nexentire.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_cancercenter.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_kbinsurance.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_lotteinsurance.jpg" alt=""></a></li>
-                                    <li><a href=""><img src="img/portfolio_strechangels.jpg" alt=""></a></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#nike"><img src="img/portfolio_nike.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#converse"><img src="img/portfolio_converse.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#ssf"><img src="img/portfolio_ssf.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#gs"><img src="img/portfolio_gsshop.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#yongwon"><img src="img/portfolio_youngone.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#nf"><img src="img/portfolio_thenorthface.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#discovery"><img src="img/portfolio_discovery.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#mlb"><img src="img/portfolio_mlb.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#tory"><img src="img/portfolio_toryburch.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#thom"><img src="img/portfolio_thombrown.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#amore"><img src="img/portfolio_amore.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#toun28"><img src="img/portfolio_toun28.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#nexen"><img src="img/portfolio_nexentire.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#cancer"><img src="img/portfolio_cancercenter.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#kb"><img src="img/portfolio_kbinsurance.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#lotte"><img src="img/portfolio_lotteinsurance.jpg" alt=""></li>
+                                    <li type="button" class="md_open_btn" aria-haspopup="dialog" title="대화상자" data-href="#stretchangles"><img src="img/portfolio_strechangels.jpg" alt=""></li>
                                 </ul>
                             </div>
                         </div>
@@ -244,13 +245,13 @@
                 </div>
                 <address>
                     <p>오감스튜디오 <span></span> 홍태원 <span></span> 사업자 등록번호:534-81-02062</p>
-                    <p>통신판매업 신고:제 2020-서울강북-1456호[사업자정보확인]</p>
+                    <p>통신판매업 신고:제 2020-서울강북-1456호</p>
                     <p>Tel:010-4029-9087<span></span>Email:taewon.hong@5gamstudio.com</p>
                     <p>address:서울특별시 강남구 논현로 134길9,신창빌딩 2층</p>
                     <p class="copyright">Copyright&#169;2015 OgamCorporation All right reserved</p>
                 </address>
             </div>
-            <div class="illust">
+            <!-- <div class="illust">
                 <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 344 312" style="enable-background:new 0 0 344 312;" xml:space="preserve">
                     <style type="text/css">
                         .st3{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-linecap:round;}
@@ -281,8 +282,133 @@
                     <path class="st3" d="M312.1,181.5c-1.1,2.9-2.8,5.1-4.4,7.7c-2.8,4.5-4.5,9.6-5.9,14.6c-1.7,5.8-3.2,11.6-4.6,17.4c-0.8,3.2-1.6,6.5-2.7,9.6c-0.5,1.5-1.3,2.9-1.6,4.4c-0.7,3.7-0.5,8,0.4,11.5c0.3,1.3,1.1,3.1,2.2,4c1.6,1.3,2.9,1.1,4.9,1.3c2.9,0.3,6.1,0.8,8.9,1.7c2.1,0.7,6.6,5.7,8.1,2.7c3.5-7.1,4.6-14.9,4.6-22.6"/>
                 </svg>
 
-            </div>
+            </div> -->
         </footer>
+    </div>
+
+
+    <div class="md_cnt" id="nike" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/nike_pc.jpg" alt=""> 
+            <img src="img/portfolio/nike_tablet.jpg" alt="">
+            <img src="img/portfolio/nike_m.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="converse" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/converse_pc.jpg" alt="">
+            <img src="img/portfolio/converse_tablet.jpg" alt="">
+            <img src="img/portfolio/converse_m.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="ssf" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/ssf_pc.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="gs" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/gs_pc.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="yongwon" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/youngwon_pc.jpg" alt="">
+            <img src="img/portfolio/youngwon_tablet.jpg" alt="">
+            <img src="img/portfolio/youngwon_m.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="nf" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/nf_pc.jpg" alt="">
+            <img src="img/portfolio/nf_tablet.jpg" alt="">
+            <img src="img/portfolio/nf_m.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="discovery" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/discovery.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="mlb" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/mlb.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="tory" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/tory.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="thom" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/thom.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="amore" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/amore.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="toun28" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/toun28_pc.jpg" alt="">
+            <img src="img/portfolio/toun28_tablet.jpg" alt="">
+            <img src="img/portfolio/toun28_m.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="nexen" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/nexen_pc.jpg" alt="">
+            <img src="img/portfolio/nexen_tablet.jpg" alt="">
+            <img src="img/portfolio/nexen_m.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="cancer" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/cancer.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="kb" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/kb.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
+    </div>
+
+    <div class="md_cnt" id="stretchangles" role="dialog" aria-modal="true">
+        <div class="portfolio_wrap">
+            <img src="img/portfolio/stretchangles.jpg" alt="">
+        </div>
+        <button type="button" class="md_close_btn" data-link="last"></button>
     </div>
     
     <script>
