@@ -111,6 +111,12 @@ $(document).ready(function () {
         }
     });
 
+    // 더보기버튼
+    $('.btn_more p').click(function () {
+        $('.delay-15').addClass('on');
+    });
+
+
 
     // fade효과
     // 1) scroll 이벤트 선언
