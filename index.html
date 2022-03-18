@@ -426,18 +426,23 @@
                 timer = setTimeout(()=>{
                     timer = null;
                     let top = document.documentElement.scrollTop;
+                    const section1 = document.querySelector(".section1").clientHeight;
+                    const section2 = document.querySelector(".section2").clientHeight;
+                    const section3 = document.querySelector(".section3").clientHeight;
+                    const section4 = document.querySelector(".section4").clientHeight;
+
                     console.log(top)
-                    if(window.scrollY < 3200){
-                        p_ex1.style.fontSize = '100px';
+                    if(window.scrollY < section1 + section2 + section3){
+                        p_ex1.style.fontSize = '5.2vw';
                     }
-                    if(window.scrollY > 3250){
-                        p_ex1.style.fontSize = '150px';
+                    if(window.scrollY > section1 + section2 + section3 + 30){
+                        p_ex1.style.fontSize = '7.8125vw';
                     }
-                    if(window.scrollY > 3400){
-                        p_ex1.style.fontSize = '200px';
+                    if(window.scrollY > section1 + section2 + section3 + 50){
+                        p_ex1.style.fontSize = '10.41vw';
                     }
-                    if(window.scrollY > 3500){
-                        p_ex1.style.fontSize = '250px';
+                    if(window.scrollY > section1 + section2 + section3 + 60){
+                        p_ex1.style.fontSize = '13.02vw';
                     }
                 }, 100);
             }

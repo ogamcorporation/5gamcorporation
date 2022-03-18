@@ -4,7 +4,7 @@
 // main
 h2{
   font-family: GMarket;
-  font-size: 250px;
+  font-size: 12vw;
 }
 h3{
   font-family: 'Roboto Condensed';
@@ -208,7 +208,7 @@ h3{
     }
     h2{
       font-size: 100px;
-      margin: 228px 0 193px 0;
+      margin: 11.875vw 0 10.05vw 0;
       text-align: right;
       cursor: pointer;
       &:hover p, &:focus p,&:hover span:last-child, &:focus span:last-child{
@@ -227,7 +227,7 @@ h3{
 
 .section5{
   .sticky_wrap{
-    height: calc(11100px - 70vh); /* sticky 속성 하단 컨텐츠가 빨리 올라올수 있도록 제어 */
+    height: calc(9248px - 10vh);
     .sticky{
       position: sticky;
       top: 200px;
@@ -237,7 +237,7 @@ h3{
       .hor_long{
         position: absolute;
         top: 102px;
-        width: 11100px;
+        width: 9248px;
         cursor: pointer;
       }
       ul{
@@ -253,8 +253,8 @@ h3{
   }
   
   img{
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
   }
 }
 

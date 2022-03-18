@@ -70,7 +70,7 @@ $(document).ready(function () {
     $(document).on('scroll', function(){
         // 오감과 함께할 당신에게,
         $('h2 .to_left').css("left", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
-        $('.section6 h2 .to_left').css("left", Math.max(1500 - 0.1*window.scrollY, 1) + "vw");
+        $('.section6 h2 .to_left').css("left", Math.max(1300 - 0.1*window.scrollY, 1) + "vw");
         $('h2 .to_right').css("right", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
     });
 
@@ -82,10 +82,10 @@ $(document).ready(function () {
             "Design; Publishing", 
             "Online Marketing",
             "Software Development",
-            "UI & UX Planning",
-            "QA; QC"
+            "QA & QC"
         ],
         typeSpeed: 100,
+        smartBackspace: true,
         loop: true,
     });
     
@@ -100,7 +100,9 @@ $(document).ready(function () {
         const scrollY = $(this).scrollTop();    //스크롤바 이동거리
         const leftMove = scrollY - stickyWrapY; // absolute를 가지는 .hor_long의 left좌표
         console.log(leftMove);
-    
+        const hor_long = $('.hor_long').width();
+        $sticky_wrap.css('height', hor_long);
+
         if (scrollY < stickyWrapY - $(window).height()/10) {  //.cnt_top이 보여지는 동안: left 0고정, 스크롤을 빨리 움직이는 사용자 때문에 조금만 빨리 animate()
           /* gsap.to('#box', {rotation: 27, x: 100, duration: 1});
           첫 번째 파라미터는 트윈 할 대상(Target)
