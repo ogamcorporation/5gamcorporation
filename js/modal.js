@@ -68,6 +68,8 @@ $(document).ready(function() {
       // 3-2) 열려진 모달을 제외한 나머지에 스크린리더 접근 허용: aria-hidden, inert을 제거
       $mdCnt.css('visibility', 'hidden').siblings().removeAttr('aria-hidden inert');
 
+      $('.md_cnt').scrollTop(0);
+
       // 4) 모달열기 버튼에 포커스 강제 이동
       $openBtn.focus();
    });
