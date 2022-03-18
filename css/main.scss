@@ -297,12 +297,12 @@ h3{
     li:nth-of-type(4n) {
       margin-right: 0;
     }
-    .delay-15{
+    .more{
       visibility: hidden;
       max-height: 0;
       overflow: hidden;
     }
-    .delay-15.on{
+    .more.on{
       visibility: visible;
       max-height: 200px;
     }

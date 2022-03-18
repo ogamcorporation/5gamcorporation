@@ -78,7 +78,7 @@ $(document).ready(function () {
 
     // section3 타이핑효과
     $(".typed").typed({
-        strings: ["Software Development", "Design&#59; Publishing", "UX &#38; UI Planning", "QA&#59; QC", "Online Marketing"],
+        strings: ["Software Development", "Design&#59; Publishing", "UX &#38; UI Planning", "QA&#59; QC part", "Online Marketing"],
         typeSpeed: 100,
         loop: true,
     });
@@ -88,7 +88,7 @@ $(document).ready(function () {
             $(this).appendTo($('.txt_right')).fadeIn(100);
         });
     }
-    setInterval(function () { trick()}, 4000);
+    setInterval(function () { trick()}, 3700);
 
 
 
@@ -117,7 +117,7 @@ $(document).ready(function () {
 
     // 더보기버튼
     $('.btn_more p').click(function () {
-        $('.delay-15').addClass('on');
+        $('.more').addClass('on');
     });
 
 

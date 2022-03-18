@@ -304,12 +304,12 @@ h3 {
 .section6 ul li:nth-of-type(4n) {
   margin-right: 0;
 }
-.section6 ul .delay-15 {
+.section6 ul .more {
   visibility: hidden;
   max-height: 0;
   overflow: hidden;
 }
-.section6 ul .delay-15.on {
+.section6 ul .more.on {
   visibility: visible;
   max-height: 200px;
 }
