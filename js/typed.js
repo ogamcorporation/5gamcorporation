@@ -2,7 +2,7 @@
 
     "use strict";
 
-    var Typed = function(el, options) {
+    const Typed = function(el, options) {
 
         // chosen element to manipulate text
         this.el = $(el);

@@ -74,22 +74,6 @@ $(document).ready(function () {
         $('h2 .to_right').css("right", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
     });
 
-    
-
-    // section3 타이핑효과
-    $(".typed").typed({
-        strings: [
-            "Design; Publishing", 
-            "Online Marketing",
-            "Software Development",
-            "QA & QC"
-        ],
-        typeSpeed: 100,
-        smartBackspace: true,
-        loop: true,
-    });
-    
-
     // 포트폴리오 부분
     const $sticky_wrap = $('.sticky_wrap');
     const stickyWrapY = $sticky_wrap.offset().top;  //.sticky_wrap이 상단 브라우저에서 떨어진 거리

@@ -274,7 +274,7 @@ h3{
     margin-top: 102px;
   }
   .client_list{
-    background: url(../img/bg_paper.jpg) no-repeat center / cover;
+    background: url(../img/bg_paper.jpg) no-repeat top left;
     width: 100%;
     height: 100%;
     padding: 124px 56px 268px 56px;
@@ -302,11 +302,10 @@ h3{
       visibility: hidden;
       max-height: 0;
       overflow: hidden;
-      transition: all 1s;
     }
     .delay-15.on{
       visibility: visible;
-      max-height: 500px;
+      max-height: 200px;
     }
   }
   .btn_more{
