@@ -3,11 +3,11 @@ $(document).ready(function () {
 
 
     // .section1 스와이퍼
-    const swiper = new Swiper('.section1 .swiper-container', {
+    let swiper = new Swiper('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
-        
+
         autoplay: {
             delay: 3000,
         },
@@ -18,6 +18,7 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
     });
+
 
 
     // 메뉴열기 클릭
@@ -73,6 +74,23 @@ $(document).ready(function () {
         $('.section6 h2 .to_left').css("left", Math.max(1300 - 0.1*window.scrollY, 1) + "vw");
         $('h2 .to_right').css("right", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
     });
+
+
+    // section3 타이핑효과
+    $(".typed").typed({
+        strings: ["Software Development", "Design&#59; Publishing", "UX &#38; UI Planning", "QA&#59; QC", "Online Marketing"],
+        typeSpeed: 100,
+        loop: true,
+    });
+
+    function trick () {
+        $('.txt_right p:first-of-type').fadeOut(function () {
+            $(this).appendTo($('.txt_right')).fadeIn(100);
+        });
+    }
+    setInterval(function () { trick()}, 4000);
+
+
 
     // 포트폴리오 부분
     const $sticky_wrap = $('.sticky_wrap');
