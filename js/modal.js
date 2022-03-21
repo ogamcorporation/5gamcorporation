@@ -33,9 +33,9 @@ $(document).ready(function() {
     $mdCnt.siblings().attr({'aria-hidden': true, inert: ''});
 
     // 4) dim 동적생성후 모달 보여지게 처리 -> 첫번째 요소에 포커스 강제 이동
-    $mdCnt.before('<div id="dim"></div>');
-    const $dim = $('#dim');
-    $dim.stop().fadeIn().next().css('visibility', 'visible').find('[data-link="first"]').focus();
+    $mdCnt.before('<div id="dim2"></div>');
+    const $dim2 = $('#dim2');
+    $dim2.stop().fadeIn().next().css('visibility', 'visible').find('[data-link="first"]').focus();
 
     // 5) 닫기 버튼을 누르기 전까지 포커스 제어 -> 키보드 trapping
     // $first에서 shift+tab => $last강제이동
@@ -60,7 +60,7 @@ $(document).ready(function() {
 
       
       // 2) dim 보이지 않게 숨기고 -> 삭제
-      $dim.stop().fadeOut(function () {
+      $dim2.stop().fadeOut(function () {
         $(this).remove();
       });
       
@@ -75,7 +75,7 @@ $(document).ready(function() {
    });
 
     //  esc , #dim 클릭시 닫기버튼과 동일하게 처리
-    $dim.on('click', function () {
+    $dim2.on('click', function () {
       $closeBtn.trigger('click');
     });
     $(window).on('keydown', function (e) {

@@ -79,14 +79,22 @@ button {
 }
 
 input[type=text] {
-  border: 1px solid #aaa;
+  border: none;
   border-radius: 0;
+  outline: none;
 }
 
 button, input {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
+}
+
+th, td, table {
+  padding: 0;
+  margin: 0;
+  border-spacing: 0px;
+  border-collapse: none;
 }
 
 address {
@@ -411,12 +419,12 @@ footer .illust.on {
   transition-delay: 1.5s !important;
 }
 
-#dim, .md_cnt {
+#dim, #dim2, .md_cnt {
   position: fixed;
   z-index: 1000;
 }
 
-#dim {
+#dim, #dim2 {
   display: none;
   top: 0;
   left: 0;

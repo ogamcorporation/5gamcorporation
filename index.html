@@ -435,13 +435,13 @@
     <div class="md_cnt pc" id="inquiry" role="dialog" aria-modal="true">
         <div class="inquiry_wrap">
             <h2>안녕하세요<br>5gam 에게 문의하세요!</h2>
-            <P>Web / Mobile E-commerce 
-                시스템 구축/리뉴얼/마이그레이션
-                기획/디자인/광고/마케팅/영업/연간운영 채용과 같은
+            <P>Web / Mobile E-commerce<br>
+                시스템 구축/리뉴얼/마이그레이션<br>
+                기획/디자인/광고/마케팅/영업/연간운영 채용과 같은<br>
                 질문을 남겨주시면 빠른 시일내로 연락드립니다.
             </P>
-            <table class="inquir_table">
-                <caption>문의폼</caption>
+            <table class="inquiry_table">
+                <caption class="blind">문의폼</caption>
                 <tr>
                     <th>회사명 (이름)</th>
                     <td>
@@ -467,10 +467,13 @@
                     </td>
                 </tr>
             </table>
+            <button type="submit">
+                <p>발송하기</p>
+            </button>
         </div>
         <button type="button" class="md_close_btn" data-link="last"></button>
     </div>
-    
+
     <script>
         const p_ex1 = document.querySelector(".parallax_txt");
         let timer;

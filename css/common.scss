@@ -82,8 +82,9 @@ ul{list-style: none;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
 img{vertical-align: top;}
 button{border: none;background: none;cursor: pointer;}
-input[type="text"]{border: 1px solid #aaa;border-radius: 0;}
+input[type="text"]{border: none;border-radius: 0;outline: none}
 button, input{font-family: inherit;font-size: inherit;color: inherit;}
+th,td,table{padding: 0;margin: 0;border-spacing:0px;border-collapse: none}
 address{font-style: normal;}
 header, nav, section, footer{display: block;}
 .blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
@@ -315,9 +316,8 @@ footer{
 
 
 // #modal
-#dim, .md_cnt{position: fixed;z-index: 1000;}
-#dim{display: none;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.5);}
+#dim, #dim2,.md_cnt{position: fixed;z-index: 1000;}
+#dim, #dim2{display: none;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.5);}
 .md_cnt{top: 50%;left: 50%;transform: translate(-50%, -50%);background: #C0C0C0;padding: 5.2vw 6vw;visibility: hidden;overflow-y: auto;height: 90vh;}
 .md_close_btn{position: absolute;top: 20px;right: 20px;width: 20px;height: 20px;background: url(../img/icon_close_btn.png) no-repeat center / contain;}
-
 
