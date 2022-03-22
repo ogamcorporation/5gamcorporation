@@ -222,35 +222,17 @@ h3{
 }
 
 .section5{
-  .sticky_wrap{
-    height: 9000px;
-    .sticky{
-      position: sticky;
-      top: 200px;
-      width: 100%;
-      height: 85vh;
-      overflow: hidden;
-      .hor_long{
-        position: absolute;
-        top: 102px;
-        cursor: pointer;
-        width: 9248px;
-      }
-      ul{
-        @include flex;
-        li{
-          @include flex;
-          align-items: center;
-          height: 100%;
-          margin-right: 44px;
-        }
-      }
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .swiper-slide{
+    width: 400px !important;
+    height: 400px !important;
+    margin: 10px;
   }
-  
-  img{
-    width: 500px;
-    height: 500px;
+  .swiper-slide img{
+    width: 400px;
+    height: 400px;
   }
 }
 
@@ -270,7 +252,7 @@ h3{
     margin-top: 102px;
   }
   .client_list{
-    background: url(../img/bg_paper.jpg) no-repeat center;
+    background: url(../img/bg_paper.jpg) no-repeat center / cover;
     width: 100%;
     height: 100%;
     padding: 124px 56px 268px 56px;

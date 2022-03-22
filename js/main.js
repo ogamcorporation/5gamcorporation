@@ -1,9 +1,6 @@
 $(document).ready(function () {
-
-
-
     // .section1 스와이퍼
-    let swiper = new Swiper('.swiper-container', {
+    const swiper = new Swiper('.section1 .swiper-container', {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
@@ -19,6 +16,27 @@ $(document).ready(function () {
         },
     });
 
+    const swiper2 = new Swiper('.section5 .swiper-container', {
+        direction: 'horizontal',
+        slidesPerView: 5,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          1440: {
+            slidesPerView: 3
+          }
+        }
+  });
+
+    
 
 
     // 메뉴열기 클릭
@@ -153,7 +171,6 @@ $(document).ready(function () {
         }
         console.log(scrollTop, road1);
     });
-
 
     $('.illust').each(function (idx, ele) {
         const footer = $('footer').offset().top;

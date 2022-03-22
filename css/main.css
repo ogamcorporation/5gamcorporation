@@ -274,46 +274,26 @@ h3 {
   margin-right: 20px;
 }
 
-.section5 .sticky_wrap {
-  height: 9000px;
-}
-
-.section5 .sticky_wrap .sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 200px;
-  width: 100%;
-  height: 85vh;
-  overflow: hidden;
-}
-
-.section5 .sticky_wrap .sticky .hor_long {
-  position: absolute;
-  top: 102px;
-  cursor: pointer;
-  width: 9248px;
-}
-
-.section5 .sticky_wrap .sticky ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.section5 .sticky_wrap .sticky ul li {
+.section5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  margin-right: 44px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.section5 img {
-  width: 500px;
-  height: 500px;
+.section5 .swiper-slide {
+  width: 400px !important;
+  height: 400px !important;
+  margin: 10px;
+}
+
+.section5 .swiper-slide img {
+  width: 400px;
+  height: 400px;
 }
 
 .section6 {
@@ -337,7 +317,7 @@ h3 {
 }
 
 .section6 .client_list {
-  background: url(../img/bg_paper.jpg) no-repeat center;
+  background: url(../img/bg_paper.jpg) no-repeat center/cover;
   width: 100%;
   height: 100%;
   padding: 124px 56px 268px 56px;
