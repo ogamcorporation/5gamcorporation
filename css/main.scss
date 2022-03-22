@@ -17,6 +17,27 @@ h3{
   letter-spacing: -2px;
   line-height: 30px;
 }
+.swiper-button-prev,
+.swiper-button-next{
+  width: 90px;
+  height: 90px;
+}
+.swiper-button-prev{
+  left: 60px;
+}
+.swiper-button-next{
+  right: 60px;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after{
+  content: '';
+  background: url("../img/icon_arrow.png") no-repeat top left / cover;
+  width: 35px;
+  height: 57px;
+}
+.swiper-button-next:after{
+  transform: rotate(180deg);
+}
 .section1{
   .swiper-container{
     width: 100%;
@@ -28,27 +49,6 @@ h3{
         object-fit: cover;
         object-position: 50% 50%;
       }
-    }
-    .swiper-button-prev,
-    .swiper-button-next{
-      width: 90px;
-      height: 90px;
-    }
-    .swiper-button-prev{
-      left: 60px;
-    }
-    .swiper-button-next{
-      right: 60px;
-    }
-    .swiper-button-prev:after,
-    .swiper-button-next:after{
-      content: '';
-      background: url("../img/icon_arrow.png") no-repeat top left / cover;
-      width: 35px;
-      height: 57px;
-    }
-    .swiper-button-next:after{
-      transform: rotate(180deg);
     }
   }
 
@@ -202,6 +202,83 @@ h3{
     .parallax_txt{
       transition: 0.22s; 
     }
+    .blink{
+      position: relative;
+    }
+    .blink::before, .container::after {
+      position: absolute;
+      content : "";
+      top: 0;
+      left: 0;
+      height: 105%;
+      width:105%;
+      border-radius:50%;
+      opacity:0.5;
+      filter: blur(30px);
+    }
+
+
+    .blink::after {
+      background-color:#00ffff;
+      z-index: -1;
+      animation : backglow2 15s ease infinite;
+    }
+
+    .blink::before {
+      background-color:#FFFFDB;
+      z-index: -2;
+      animation : backglow1 5s ease infinite;
+    }
+    @keyframes backglow1 {
+      0% {
+        transform: translate(10%, 10%) scale(1);
+        opacity:0.5;
+      }
+
+      25% {
+        transform: translate(-10%, 10%) scale(0.8);
+        opacity:0.5;
+      }
+
+      50% {
+        transform: translate(-10%, -10%) scale(1.2);
+        opacity:0.8;
+      }
+
+      75% {
+        transform: translate(10%, -10%) scale(1.1);
+        opacity:0.2;
+      }
+
+      100% {
+        transform: translate(10%, 10%) scale(1);
+        opacity:0.5;
+      }
+
+    }
+
+    @keyframes backglow2 {
+      0% {
+        transform: translate(-10%, -10%) scale(1);
+        opacity:0.5;
+      }
+      25% {
+        transform: translate(10%, -10%) scale(0.8);
+        opacity:0.5;
+      }
+      50% {
+        transform: translate(10%, 10%) scale(1.2);
+        opacity:0.8;
+      }
+      75% {
+        transform: translate(-10%, 10%) scale(1.1);
+        opacity:0.2;
+      }
+      100% {
+        transform: translate(-10%, -10%) scale(1);
+        opacity:0.5;
+      }
+    }
     h2{
       font-size: 100px;
       margin: 11.875vw 0 10.05vw 0;
@@ -210,7 +287,7 @@ h3{
       &:hover p, &:focus p,&:hover span:last-child, &:focus span:last-child{
         color: transparent;
         -webkit-text-stroke-width: 2px;
-	      -webkit-text-stroke-color: #000;
+        -webkit-text-stroke-color: #000;
       }
       span:first-child{
         display: inline-block;
@@ -222,18 +299,29 @@ h3{
 }
 
 .section5{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  padding-bottom: 300px;
+  .swiper-button-prev{
+    left: 0;
+  }
+  .swiper-button-next{
+    right: 0;
+  }
   .swiper-slide{
     width: 400px !important;
     height: 400px !important;
-    margin: 10px;
+    margin: 20px;
+    cursor: pointer;
   }
   .swiper-slide img{
     width: 400px;
     height: 400px;
+    transition: transform 0.5s;
   }
+  .swiper-slide:hover img,
+  .swiper-slide:focus img{
+    transform: scale(1.1);
+  }
+
 }
 
 .section6{
