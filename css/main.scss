@@ -324,7 +324,7 @@ h3{
 .portfolio_wrap{
   display: flex;
 }
-.responsible img:first-child,
+.responsible img:first-child
 {
   width: 43.5vw;
   height: 100%;
@@ -345,8 +345,9 @@ h3{
 }
 #inquiry{
   background: #FFFFFF;
-  padding: 117px 100px 0 100px;
-  font-family: GMarket;
+  padding: 117px 100px 117px 100px;
+  font-family: spoqa;
+  height: auto;
   h2{
     font-size: 40px;
     text-align: center;
@@ -387,4 +388,84 @@ h3{
     height: 50px;
     margin: 39px auto 0;
   }
+}
+
+
+// 반응형
+@media screen and (max-width: 1440px) {
+  h2{
+    font-size: 10vw;
+  }
+  h3{
+    font-size: 2.7778vw;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 1.111vw 0.9722vw;
+    margin-bottom: 2.5vw;
+    line-height: 2.0833vw;
+  }
+  .section2{
+    .movetxt{
+      margin: 20.7639vw 0 6.3889vw 0;
+    }
+    .road1{
+      padding: 0 11.1111vw 0 7.0833vw;
+    }
+    .infinite{
+      top: 30%;
+      margin-left: 3.3333vw;
+      .infin_logo{
+        height: 4.3056vw;
+      }
+    }
+  }
+  .section3{
+    .hire_cnt{
+      height: auto;
+      padding-bottom: 9%;
+      .txt_wrap{
+        width: 70.1389vw;
+        height: 400px;
+        strong{
+          font-size: 6.9444vw;
+        }
+      }
+      
+      .txt_right{
+        font-size: 1.3889vw;
+        line-height: 2.0833vw;
+      }
+      h4{
+        font-size: 2.7778vw;
+      }
+    }
+  }
+  .section4{
+    h2{
+      span:first-child{
+        font-size: 2vw;
+      }
+    }
+  }
+
+  .section5{
+    .sticky_wrap{
+      height: calc(9248px - 10vh);
+      .sticky{
+        height: 90vh;
+        .hor_long{
+          width: 9248px;
+        }
+      }
+    }
+    
+    img{
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+
+
+
 }
