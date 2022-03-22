@@ -2,78 +2,16 @@
 @import "_var", "_mixin";
 
 
-/* font-family */
-@font-face {
-  font-family: GMarket;
-  font-style: normal;
-  font-weight: 300;
-  src: local("Gmarket Sans Light"), local("GmarketSans-Light"),
-  url("../font/Gmarket_Sans/GmarketSansLight.otf") format("opentype"),
-  url("../font/Gmarket_Sans/GmarketSansTTFLight.ttf") format("truetype");
-}
-@font-face {
-  font-family: GMarket;
-  font-style: normal;
-  font-weight: 500;
-  src: local("Gmarket Sans Medium"), local("GmarketSans-Medium"),
-  url("../font/Gmarket_Sans/GmarketSansMedium.otf") format("opentype"),
-  url("../font/Gmarket_Sans/GmarketSansTTFMedium.ttf") format("truetype");
-}
-@font-face {
-  font-family: GMarket;
-  font-style: normal;
-  font-weight: 700;
-  src: local("Gmarket Sans Bold"), local("GmarketSans-Bold"),
-  url("../font/Gmarket_Sans/GmarketSansBold.otf") format("opentype"),
-  url("../font/Gmarket_Sans/GmarketSansTTFBold.ttf") format("truetype");
-}
 
-@font-face {
-  font-family: IBM;
-  font-style: normal;
-  font-weight: 400;
-  src: local("IBM_Plex_Sans"),
-  url("../font/IBM_Plex_Sans/IBMPlexSans-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: spoqa;
-  font-style: normal;
-  font-weight: 300;
-  src: local("SpoqaHanSans"),
-  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Light.otf") format("opentype"),
-  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: spoqa;
-  font-style: normal;
-  font-weight: 400;
-  src: local("SpoqaHanSans"),
-  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Regular.otf") format("opentype"),
-  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: spoqa;
-  font-style: normal;
-  font-weight: 500;
-  src: local("SpoqaHanSans"),
-  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Medium.otf") format("opentype"),
-  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: spoqa;
-  font-style: normal;
-  font-weight: 700;
-  src: local("SpoqaHanSans"),
-  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Bold.otf") format("opentype"),
-  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Bold.ttf") format("truetype");
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700&display=swap');
+@font-face {
+  font-family: 'NEXON Lv2 Gothic Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 // tag reset
 body, h1, h2, h3, h4, h5, h6, p, ul, button, input[type="text"]{margin: 0;padding: 0;}

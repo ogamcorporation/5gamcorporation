@@ -1,5 +1,5 @@
 h2 {
-  font-family: GMarket;
+  font-family: 'NEXON Lv2 Gothic Bold';
   font-size: 12vw;
 }
 
@@ -151,7 +151,7 @@ h3 {
 }
 
 .section3 .hire_cnt {
-  font-family: GMarket;
+  font-family: NEXON Lv2 Gothic Bold;
   width: 100%;
   height: 80vh;
   background-color: #E1DFDF;
@@ -275,7 +275,7 @@ h3 {
 }
 
 .section5 .sticky_wrap {
-  height: calc(9248px - 10vh);
+  height: 9000px;
 }
 
 .section5 .sticky_wrap .sticky {
@@ -283,15 +283,15 @@ h3 {
   position: sticky;
   top: 200px;
   width: 100%;
-  height: 90vh;
+  height: 85vh;
   overflow: hidden;
 }
 
 .section5 .sticky_wrap .sticky .hor_long {
   position: absolute;
   top: 102px;
-  width: 9248px;
   cursor: pointer;
+  width: 9248px;
 }
 
 .section5 .sticky_wrap .sticky ul {
@@ -443,7 +443,7 @@ h3 {
 
 #inquiry .inquiry_table {
   width: 600px;
-  height: 260px;
+  height: 300px;
   color: #171111;
   font-weight: 400;
   border: 1px solid #000;
@@ -454,12 +454,22 @@ h3 {
   width: 100%;
 }
 
+#inquiry .inquiry_table textarea {
+  border: none;
+  resize: none;
+  outline: none;
+  width: 100%;
+  height: 90%;
+  font-size: 20px;
+  font-family: spoqa;
+}
+
 #inquiry .inquiry_table th, #inquiry .inquiry_table td {
   border: 1px solid #000;
 }
 
 #inquiry .inquiry_table td {
-  padding: 0 20px;
+  padding: 15px 20px;
   font-family: spoqa;
 }
 
@@ -519,6 +529,12 @@ h3 {
   }
   .section4 h2 span:first-child {
     font-size: 2vw;
+  }
+  .section5 .sticky_wrap {
+    height: 8500px;
+  }
+  .section5 .hor_long {
+    height: 9000px;
   }
   .section5 .sticky {
     height: 70vh;

@@ -71,7 +71,7 @@ $(document).ready(function () {
     $(document).on('scroll', function(){
         // 오감과 함께할 당신에게,
         $('h2 .to_left').css("left", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
-        $('.section6 h2 .to_left').css("left", Math.max(1300 - 0.1*window.scrollY, 1) + "vw");
+        $('.section6 h2 .to_left').css("left", Math.max(1380- 0.1*window.scrollY, 1) + "vw");
         $('h2 .to_right').css("right", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
     });
 
@@ -91,29 +91,29 @@ $(document).ready(function () {
     setInterval(function () { trick()}, 3700);
 
 
-
     // 포트폴리오 부분
-    const $sticky_wrap = $('.sticky_wrap');
-    const stickyWrapY = $sticky_wrap.offset().top;  //.sticky_wrap이 상단 브라우저에서 떨어진 거리
-    const stickyWrapHei = $sticky_wrap.outerHeight(); //.sticky_wrap의 세로 높이(border 포함)
-    console.log(stickyWrapY, stickyWrapHei);  // 4920 4225
+    // const $sticky_wrap = $('.sticky_wrap');
+    // const stickyWrapY = $sticky_wrap.offset().top;  //.sticky_wrap이 상단 브라우저에서 떨어진 거리
+    // const stickyWrapHei = $sticky_wrap.outerHeight(); //.sticky_wrap의 세로 높이(border 포함)
+    // console.log(stickyWrapY, stickyWrapHei);  // 4920 4225
 
-    $(window).on('scroll', function () {
-        const scrollY = $(this).scrollTop();    //스크롤바 이동거리
-        const leftMove = scrollY - stickyWrapY; // absolute를 가지는 .hor_long의 left좌표
-        console.log(leftMove);
-        const hor_long = $('.hor_long').width();
-        $sticky_wrap.css('height', hor_long);
+    // $(window).on('scroll', function () {
+    //     const scrollY = $(this).scrollTop();    //스크롤바 이동거리
+    //     const leftMove = scrollY - stickyWrapY; // absolute를 가지는 .hor_long의 left좌표
+    //     console.log(leftMove);
+    //     const hor_long = $('.hor_long').width();
+    //     $sticky_wrap.css('height', hor_long);
 
-        if (scrollY < stickyWrapY - $(window).height()/10) {  //.cnt_top이 보여지는 동안: left 0고정, 스크롤을 빨리 움직이는 사용자 때문에 조금만 빨리 animate()
-          /* gsap.to('#box', {rotation: 27, x: 100, duration: 1});
-          첫 번째 파라미터는 트윈 할 대상(Target)
-          두 번째 속성(Properties) */
-          gsap.to('.hor_long', {left: 0, duration: 0.5, ease: Power3.easeOut});
-        } else if (scrollY < stickyWrapY + stickyWrapHei - $(window).height()) { //.cnt_btm이 보이지 전 : left=> 스크롤바의 이동거리-.sticky_wrap의수직위치
-          gsap.to('.hor_long', {left: -leftMove, duration: 0.5, ease: Power3.easeOut});
-        }
-    });
+    //     if (scrollY < stickyWrapY - $(window).height()/10) {  //.cnt_top이 보여지는 동안: left 0고정, 스크롤을 빨리 움직이는 사용자 때문에 조금만 빨리 animate()
+    //     /* gsap.to('#box', {rotation: 27, x: 100, duration: 1});
+    //     첫 번째 파라미터는 트윈 할 대상(Target)
+    //     두 번째 속성(Properties) */
+    //     gsap.to('.hor_long', {left: 0, duration: 0.5, ease: Power3.easeOut});
+    //     } else if (scrollY < stickyWrapY + stickyWrapHei - $(window).height()) { //.cnt_btm이 보이지 전 : left=> 스크롤바의 이동거리-.sticky_wrap의수직위치
+    //     gsap.to('.hor_long', {left: -leftMove, duration: 0.5, ease: Power3.easeOut});
+    //     }
+    // });
+   
 
     // 더보기버튼
     $('.btn_more p').click(function () {
@@ -126,7 +126,7 @@ $(document).ready(function () {
     // 1) scroll 이벤트 선언
     $(window).on('scroll', function () {
     // 2) 스크롤바의 수직 이동거리를 변수에 저장(스크롤을 빨리 움직이는 사용자를 위해 값을 더해주기)
-    const scrollY = $(this).scrollTop() + $(this).height()*2/3;
+    const scrollY = $(this).scrollTop() + $(this).height()* 3/4;
 
     // 3) 스크롤바의 수직이동거리와 나(보여질 컨텐츠)의 위치가 가까워질 경우만 .fade.on 클래스명 추가
     $('.fade').each(function (idx, ele) {
