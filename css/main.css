@@ -520,18 +520,17 @@ h3 {
   .section4 h2 span:first-child {
     font-size: 2vw;
   }
-  .section5 .sticky_wrap {
-    height: calc(9248px - 10vh);
-  }
-  .section5 .sticky_wrap .sticky {
-    height: 90vh;
-  }
-  .section5 .sticky_wrap .sticky .hor_long {
-    width: 9248px;
+  .section5 .sticky {
+    height: 70vh;
   }
   .section5 img {
-    width: 500px;
-    height: 500px;
+    width: 470px;
+    height: 470px;
+  }
+  .section6 .btn_more p {
+    font-size: 20px;
+    padding: 1.5625vw;
+    width: 130px;
   }
 }
 /*# sourceMappingURL=main.css.map */
