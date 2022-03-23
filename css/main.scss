@@ -125,9 +125,8 @@ h3{
   .hire_cnt{
     font-family: NEXON Lv2 Gothic Bold;
     width: 100%;
-    height: 80vh;
     background-color: #E1DFDF;
-    padding-top: 9%;
+    padding: 9% 0;
     .txt_wrap{
       border: 5px solid #171111;
       background-color: #FFFFFF;
@@ -202,83 +201,7 @@ h3{
     .parallax_txt{
       transition: 0.22s; 
     }
-    .blink{
-      position: relative;
-    }
-    .blink::before, .container::after {
-      position: absolute;
-      content : "";
-      top: 0;
-      left: 0;
-      height: 105%;
-      width:105%;
-      border-radius:50%;
-      opacity:0.5;
-      filter: blur(30px);
-    }
 
-
-    .blink::after {
-      background-color:#00ffff;
-      z-index: -1;
-      animation : backglow2 15s ease infinite;
-    }
-
-    .blink::before {
-      background-color:#FFFFDB;
-      z-index: -2;
-      animation : backglow1 5s ease infinite;
-    }
-    @keyframes backglow1 {
-      0% {
-        transform: translate(10%, 10%) scale(1);
-        opacity:0.5;
-      }
-
-      25% {
-        transform: translate(-10%, 10%) scale(0.8);
-        opacity:0.5;
-      }
-
-      50% {
-        transform: translate(-10%, -10%) scale(1.2);
-        opacity:0.8;
-      }
-
-      75% {
-        transform: translate(10%, -10%) scale(1.1);
-        opacity:0.2;
-      }
-
-      100% {
-        transform: translate(10%, 10%) scale(1);
-        opacity:0.5;
-      }
-
-    }
-
-    @keyframes backglow2 {
-      0% {
-        transform: translate(-10%, -10%) scale(1);
-        opacity:0.5;
-      }
-      25% {
-        transform: translate(10%, -10%) scale(0.8);
-        opacity:0.5;
-      }
-      50% {
-        transform: translate(10%, 10%) scale(1.2);
-        opacity:0.8;
-      }
-      75% {
-        transform: translate(-10%, 10%) scale(1.1);
-        opacity:0.2;
-      }
-      100% {
-        transform: translate(-10%, -10%) scale(1);
-        opacity:0.5;
-      }
-    }
     h2{
       font-size: 100px;
       margin: 11.875vw 0 10.05vw 0;

@@ -89,7 +89,7 @@ $(document).ready(function () {
     $(document).on('scroll', function(){
         // 오감과 함께할 당신에게,
         $('h2 .to_left').css("left", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
-        $('.section6 h2 .to_left').css("left", Math.max(450- 0.1*window.scrollY, 1) + "vw");
+        $('.section6 h2 .to_left').css("left", Math.max( 380 - 0.1*window.scrollY, 1) + "vw");
         $('h2 .to_right').css("right", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
     });
 
