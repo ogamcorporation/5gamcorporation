@@ -432,7 +432,7 @@
         <button type="button" class="md_close_btn" data-link="last"></button>
     </div>
 
-    <div class="md_cnt pc" id="inquiry" role="dialog" aria-modal="true">
+    <div class="md_cnt" id="inquiry" role="dialog" aria-modal="true">
         <div class="inquiry_wrap">
             <h2>안녕하세요<br>Ogam 에게 문의하세요!</h2>
             <P>Web / Mobile E-commerce<br>
@@ -440,36 +440,42 @@
                 기획/디자인/광고/마케팅/영업/연간운영/채용과 같은<br>
                 질문을 남겨주시면 빠른 시일내로 연락드립니다.
             </P>
-            <table class="inquiry_table">
-                <caption class="blind">문의폼</caption>
-                <tr>
-                    <th>회사명 (이름)</th>
-                    <td>
-                        <input type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <th>이메일</th>
-                    <td>
-                        <input type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <th>연락처</th>
-                    <td>
-                        <input type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <th>문의사항</th>
-                    <td>
-                        <textarea rows="4"></textarea>
-                    </td>
-                </tr>
-            </table>
-            <button type="submit">
-                <p>발송하기</p>
-            </button>
+            <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzXu06Ukpvsqu-cPLPV8i1zKvUMxh_5pyOeJZJEyHQHsME66xjbRgk06Q2_EYzNUcH2xA/exec">
+                <table class="inquiry_table">
+                    <caption class="blind">문의폼</caption>
+                    <tr>
+                        <th><label for="name">회사명 (이름)</label></th>
+                        <td>
+                            <input type="text" name="name" id="name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="email">이메일</label></th>
+                        <td>
+                            <input type="text" name="email" id="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="number">연락처</label></th>
+                        <td>
+                            <input type="text" name="number" id="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="message"></label>문의사항</th>
+                        <td>
+                            <textarea rows="4" name="message" id="message"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit" class="send">
+                    <p>발송하기</p>
+                </button>
+                <div style="display:none" class="thankyou_message">
+                    <!-- You can customize the thankyou message by editing the code below -->
+                    <p>메일이 정상적으로 전송되었습니다. 감사합니다.</p>
+                </div>
+            </form>
         </div>
         <button type="button" class="md_close_btn btn_black" data-link="last"></button>
     </div>
@@ -505,5 +511,7 @@
             }
         });
     </script>
+
+<script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 </body>
 </html>
