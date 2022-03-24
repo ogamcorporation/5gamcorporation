@@ -22,29 +22,6 @@
     <script src="js/typed.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function () {
-
-            $('.send').click(function(){
-                $.ajax({
-                    type:"POST",
-                    url: "https://script.google.com/macros/s/AKfycbxGu6a7IneveOLhLt_Z090mNoh3ToH2jXpo2XjyohpOl6v7QblvahiWdwox3C4IZBJH5A/exec",
-                    success:function(){
-                        $('.thankyou_message').css('display','block');
-                    },
-                    beforeSend:function(){
-                        $('.loading').css('display','block');
-                    },
-                    complete:function(){
-                        $('.loading').css('display','none');
-                    }
-                });
-
-                return false; //<- 이 문장으로 새로고침(reload)이 방지됨
-            });
-
-        });
-    </script>
 
 </head>
 <body>
@@ -448,7 +425,7 @@
                 기획/디자인/광고/마케팅/영업/연간운영/채용과 같은<br>
                 질문을 남겨주시면 빠른 시일내로 연락드립니다.
             </P>
-            <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxGu6a7IneveOLhLt_Z090mNoh3ToH2jXpo2XjyohpOl6v7QblvahiWdwox3C4IZBJH5A/exec">
+            <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbywQrg_YYPp_oJc5o3ORjPg4yIQG7DouMXvGzin2gvneNyNyeF3QdpZL_Jn60NZvM2mZw/exec">
                 <table class="inquiry_table">
                     <caption class="blind">문의폼</caption>
                     <tr>
@@ -520,6 +497,8 @@
         });
     </script>
     <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+
+
 
 </body>
 
