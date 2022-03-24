@@ -1,13 +1,66 @@
 @charset "utf-8";
 @import "_var", "_mixin";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700&display=swap');
-@font-face {
-  font-family: 'NEXON Lv2 Gothic Bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
-  font-weight: normal;
+@font-face{
+  font-family: NEXON;
   font-style: normal;
+  font-weight: 400;
+  src: url("../font/NEXON_Lv2_Gothic_total/NEXON Lv2 Gothic.eot");
+  src: local("NEXON_Lv2_Gothic_total"),
+  url("../font/NEXON_Lv2_Gothic_total/NEXON Lv2 Gothic.eot?#iefix") format("embedded-opentype"),
+  url("../font/NEXON_Lv2_Gothic_total/NEXON Lv2 Gothic.woff") format("woff"),
+  url("../font/NEXON_Lv2_Gothic_total/NEXON Lv2 Gothic.ttf") format("truetype"),
+  url("../font/NEXON_Lv2_Gothic_total/NEXON Lv2 Gothic.otf") format("opentype");
+}
+@font-face{
+  font-family: NEXON;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/NEXON_Lv2_Gothic_total/NEXON Lv2 Gothic Bold.eot");
+  src: local("NEXON_Lv2_Gothic_total"),
+  url("../font/NEXON_Lv2_Gothic_total/NEXON Lv2 Gothic Bold.eot?#iefix") format("embedded-opentype"),
+  url("../font/NEXON_Lv2_Gothic_total/NEXON Lv2 Gothic Bold.woff") format("woff"),
+  url("../font/NEXON_Lv2_Gothic_total/NEXON Lv2 Gothic Bold.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: spoqa;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Spoqa_Han_Sans"),
+  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Regular.otf") format("opentype"),
+  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Regular.ttf") format("truetype");
+}
+@font-face{
+  font-family: spoqa;
+  font-style: normal;
+  font-weight: 600;
+  src: local("Spoqa_Han_Sans"),
+  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Medium.otf") format("opentype"),
+  url("../font/Spoqa_Han_Sans/SpoqaHanSansNeo-Medium.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: RobotoC;
+  font-style: normal;
+  font-weight: 400;
+  src: local("RobotoCondensed"),
+  url("../font/Roboto_Condensed/RobotoCondensed-Regular.ttf") format("truetype");
+}
+@font-face{
+  font-family: RobotoC;
+  font-style: normal;
+  font-weight: 700;
+  src: local("RobotoCondensed"),
+  url("../font/Roboto_Condensed/RobotoCondensed-Bold.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: IBM;
+  font-style: normal;
+  font-weight: 400;
+  src: local("IBM_Plex_Sans"),
+  url("../font/IBM_Plex_Sans/IBMPlexSans-Regular.ttf") format("truetype");
 }
 
 // tag reset
@@ -19,7 +72,7 @@ img{vertical-align: top;}
 button{border: none;background: none;cursor: pointer;}
 input[type="text"]{border: none;border-radius: 0;outline: none}
 button, input{font-family: inherit;font-size: inherit;color: inherit;}
-th,td,table{padding: 0;margin: 0;border-spacing:0px;border-collapse: none}
+th,td,table{padding: 0;margin: 0;border-spacing:0px;}
 address{font-style: normal;}
 header, nav, section, footer{display: block;}
 .blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
@@ -108,7 +161,8 @@ html{
     z-index: 1200;
     width: 391px;
     height: 100%;
-    font-family: 'Roboto Condensed';
+    font-family: RobotoC;
+    font-weight: 700;
     color: #fff;
     background: #000;
     padding-top: 75px;
