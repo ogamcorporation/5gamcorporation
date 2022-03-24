@@ -160,11 +160,9 @@ html {
   height: 178px;
   padding: 0 56px;
 }
-.header .logo {
-  font-family: NEXON;
-  font-weight: 700;
-  color: #000;
-  font-size: 30px;
+.header .logo img {
+  height: 80px;
+  width: 100%;
 }
 .header .nav_btn {
   position: relative;
