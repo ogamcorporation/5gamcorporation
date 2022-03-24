@@ -450,7 +450,6 @@
             </P>
             <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxGu6a7IneveOLhLt_Z090mNoh3ToH2jXpo2XjyohpOl6v7QblvahiWdwox3C4IZBJH5A/exec">
                 <table class="inquiry_table">
-
                     <caption class="blind">문의폼</caption>
                     <tr>
                         <th><label for="name">회사명 (이름)</label></th>
@@ -477,7 +476,7 @@
                         </td>
                     </tr>
                 </table>
-                <button type="button" class="send">
+                <button type="submit" class="send">
                     <p>발송하기</p>
                 </button>
                 <div style="display: none" class="thankyou_message">
@@ -520,6 +519,7 @@
             }
         });
     </script>
+    <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
 </body>
 
