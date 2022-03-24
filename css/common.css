@@ -162,8 +162,7 @@ html {
 }
 .header .logo img {
   height: 80px;
-  width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .header .nav_btn {
   position: relative;

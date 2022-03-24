@@ -107,8 +107,7 @@ html{
   padding: 0 56px;
   .logo img{
     height: 80px;
-    width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
   .nav_btn{
     position: relative;
