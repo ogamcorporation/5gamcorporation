@@ -22,9 +22,36 @@
     <script src="js/typed.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.send').click(function(){
+                $.ajax({
+                    type:"POST",
+                    url: "https://script.google.com/macros/s/AKfycbxGu6a7IneveOLhLt_Z090mNoh3ToH2jXpo2XjyohpOl6v7QblvahiWdwox3C4IZBJH5A/exec",
+                    success:function(){
+                        $('.thankyou_message').css('display','block');
+                    },
+                    beforeSend:function(){
+                        $('.loading').css('display','block');
+                    },
+                    complete:function(){
+                        $('.loading').css('display','none');
+                    }
+                });
+
+                return false; //<- 이 문장으로 새로고침(reload)이 방지됨
+            });
+
+
+
+        });
+    </script>
 
 </head>
 <body>
+
+    <div id="loading" class="loading"></div>
     <div id="skip">
         <a href="#main_cnt">본문 바로가기</a>
     </div>
@@ -422,8 +449,9 @@
                 기획/디자인/광고/마케팅/영업/연간운영/채용과 같은<br>
                 질문을 남겨주시면 빠른 시일내로 연락드립니다.
             </P>
-            <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzXu06Ukpvsqu-cPLPV8i1zKvUMxh_5pyOeJZJEyHQHsME66xjbRgk06Q2_EYzNUcH2xA/exec">
+            <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxGu6a7IneveOLhLt_Z090mNoh3ToH2jXpo2XjyohpOl6v7QblvahiWdwox3C4IZBJH5A/exec">
                 <table class="inquiry_table">
+
                     <caption class="blind">문의폼</caption>
                     <tr>
                         <th><label for="name">회사명 (이름)</label></th>
@@ -450,10 +478,10 @@
                         </td>
                     </tr>
                 </table>
-                <button type="submit" class="send">
+                <button type="button" class="send">
                     <p>발송하기</p>
                 </button>
-                <div style="display:none" class="thankyou_message">
+                <div style="display: none" class="thankyou_message">
                     <!-- You can customize the thankyou message by editing the code below -->
                     <p>메일이 정상적으로 전송되었습니다. 감사합니다.</p>
                 </div>
@@ -494,6 +522,6 @@
         });
     </script>
 
-<script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 </body>
+
 </html>

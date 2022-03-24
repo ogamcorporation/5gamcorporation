@@ -390,13 +390,33 @@ h3{
     margin: 39px auto 0;
   }
   .thankyou_message{
+    @include translate-50;
+    position: fixed;
+    z-index: 1005;
+    top: 50%;
+    left: 50%;
     p{
-      margin-top: 20px;
+      background: #000;
       font-size: 20px;
       font-weight: 700;
       text-align: center;
+      color: #fff;
+      padding: 40px 20px 30px;
     }
+
   }
+}
+.loading{
+  display: none;
+  position: absolute;
+  z-index: 1001;
+  @include translate-50;
+  top: 50%;
+  left: 50%;
+  background: url("../img/loading.gif") no-repeat;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
 }
 
 

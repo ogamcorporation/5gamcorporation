@@ -400,11 +400,41 @@ h3 {
   height: 50px;
   margin: 39px auto 0;
 }
+#inquiry .thankyou_message {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 1005;
+  top: 50%;
+  left: 50%;
+}
 #inquiry .thankyou_message p {
-  margin-top: 20px;
+  background: #000;
   font-size: 20px;
   font-weight: 700;
   text-align: center;
+  color: #fff;
+  padding: 40px 20px 30px;
+}
+
+.loading {
+  display: none;
+  position: absolute;
+  z-index: 1001;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: url("../img/loading.gif") no-repeat;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
 }
 
 @media screen and (max-width: 1440px) {

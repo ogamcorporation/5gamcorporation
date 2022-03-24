@@ -84,4 +84,7 @@ $(document).ready(function() {
       if (e.keyCode === 27) $closeBtn.click();
     });
  });
+ $('.md_close_btn.btn_black').click(function () {
+     location.reload();
+ });
 });
