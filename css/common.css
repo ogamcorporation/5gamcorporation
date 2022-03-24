@@ -161,15 +161,10 @@ html {
   padding: 0 56px;
 }
 .header .logo {
+  font-family: NEXON;
+  font-weight: 700;
   color: #000;
-}
-.header .logo svg {
-  width: 250px;
-  height: 30px;
-}
-.header .logo p {
-  margin-top: 8px;
-  font-family: IBM;
+  font-size: 30px;
 }
 .header .nav_btn {
   position: relative;

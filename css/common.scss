@@ -106,15 +106,10 @@ html{
   height: 178px;
   padding: 0 56px;
   .logo{
+    font-family: NEXON;
+    font-weight: 700;
     color: #000;
-    svg{
-      width: 250px;
-      height: 30px;
-    }
-    p{
-      margin-top: 8px;
-      font-family: IBM;
-    }
+    font-size: 30px;
   }
   .nav_btn{
     position: relative;
