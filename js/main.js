@@ -16,25 +16,28 @@ $(document).ready(function () {
         },
     });
 
-    const swiper2 = new Swiper('.section5 .swiper-container', {
-        direction: 'horizontal',
-        slidesPerView: 4,
-        centeredSlides: true,
+    var swiper2 = new Swiper(".section5 .swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        grabCursor: true,
         loop: true,
         pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+            el: ".swiper-pagination",
+            clickable: true,
         },
+
+        // Navigation arrows
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-          1440: {
-            slidesPerView: 3
-          }
-        }
-  });
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
+    });
 
     
 

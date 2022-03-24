@@ -230,14 +230,11 @@ h3{
     right: 0;
   }
   .swiper-slide{
-    width: 400px !important;
-    height: 400px !important;
-    margin: 20px;
     cursor: pointer;
   }
   .swiper-slide img{
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     transition: transform 0.5s;
   }
   .swiper-slide:hover img,
@@ -455,6 +452,7 @@ h3{
     }
   }
   .section5{
+    padding-bottom: 200px;
     .sticky_wrap{
       height: 8500px;
     }
