@@ -10,11 +10,15 @@ debug($responseCate);
 
 /* products */
 $limit=($_GET['limit'])?$_GET['limit']:40;
-$pno=($_GET['pno'])?"&product_no=".$_GET['pno']:"";
-$fields = ($limit==1) ? "" : "&fields=product_no,custom_product_code,product_name,list_image,category";
 $method = 'GET';
-$sEndPointUrl = "https://{$_SESSION['mall_id']}.cafe24api.com/api/v2/admin/products?limit={$limit}{$fields}{$pno}";
-$response = curl_call($sEndPointUrl, $method);
+$pno=$_GET['pno'];
+if($limit==1 && $pno){
+    $response = get_product($pno);
+}else{
+    $fields = "&fields=product_no,custom_product_code,product_name,list_image,category_no";
+    $sEndPointUrl = "https://{$_SESSION['mall_id']}.cafe24api.com/api/v2/admin/products?limit={$limit}{$fields}";
+    $response = curl_call($sEndPointUrl, $method);
+}
 
 if($limit==1) debug($response);
 ?>
@@ -25,7 +29,7 @@ if($limit==1) debug($response);
         <div><img src="<?=$product['list_image']?>"></div>
         <div>
             product_no : <?=$product['product_no']?> 
-            <span>CA:<?=$product['category']?> </span>
+            <span>CA:<?=$product['category_no']?> </span>
             <a href="dummyProductList.php?limit=1&pno=<?=$product['product_no']?>">보기</a>
             <a href="dummyProductDel.php?pno=<?=$product['product_no']?>">삭제</a>
             </div>

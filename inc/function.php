@@ -65,6 +65,28 @@
         }
         return $return;
     }
+    
+    function get_product($pno){
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => 'https://'.$_SESSION['mall_id'].'.cafe24api.com/api/v2/admin/products/'.$pno,
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_CUSTOMREQUEST => 'GET',
+          CURLOPT_HTTPHEADER => array(
+            'Authorization: Bearer '.$_SESSION['access_token'],
+            'Content-Type: application/json',
+            'X-Cafe24-Api-Version: 2022-06-01'
+          ),
+        ));
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        if ($err) {
+          echo 'cURL Error #:' . $err;
+        } else {
+            $response = json_decode($response,true);
+        }
+        return $response;
+    }
 
 
     function random_str_generator ($len_of_gen_str){
