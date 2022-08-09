@@ -6,20 +6,35 @@ $n1=0;
 $n2=0;
 $loop = ($_GET['loop']) ? $_GET['loop'] : 1;
 for($i=0;$i<$loop;$i++){
-    
+
     $n1++;
-    
-    #변수설정
-    $category = rand(24,25);
-    $product_condition = ($category==24) ? "U" : "N";
-    $product_used_month = ($product_condition=="U") ? 2 : "0";
-    $randomName = random_str_generator(8);
-    $price = rand(10,500) * 100;
+
+    /* 변수설정 */
+    $category = rand(24,25); //중고카테고리 24, 스토어카테고리 25
+    $product_condition = ($category==24) ? "U" : "N"; //중고 U, 신품 N
+    $product_used_month = ($product_condition=="U") ? 2 : "0"; // 중고 2개월, 신품 0개월
+    $price = 0;
     $endDate = date('Y-m-d', strtotime( '+'.mt_rand(0,30).' days'));
-    $buy_limit_type = "M"; // 회원만 구매하기 (구매버튼 보이기)
-    
+    $randomName = random_str_generator(8); // 임시 포토카드ID
+
+    /* 플리 제공변수*/
+    $shop_no = 1;
+    $custom_product_code = $randomName; // 포토카드 ID
+    $product_name = "포토카드 -".$randomName; // 포토카드명 - 한국어/영
+    $detail_image = '/web/product/sample/photo_f_'.rand(1,10).'.png'; // 앞면 이미지 바이너리
+    $additional_image = "web/product/sample/photo_b.png"; // 뒷면 이미지 바이너리  (현재오류 해결후 추가 작업)
+
+
+    $airtist = "아티스트 - ".$randomName; // 아티스트명 - 6개 국어
+    $airtist_member = "멤버 - ".$randomName; // 멤버명[] - 6개 국어
+    $release_date = "2000-01-01"; // 출시일
+    $event = "행사/앨범"; // 행사/앨범
+    $memo = "기타메모"; // 기타메모
+    $hash_tag = "해시태그"; // 해시태그-  한국어/영어
+    $search = $hash_tag;
+
     $data = '{
-        "shop_no": 1,
+        "shop_no": '.$shop_no.',
         "request": {
             "display": "T",
             "selling": "T",
@@ -32,8 +47,8 @@ for($i=0;$i<$loop;$i++){
                     "new": "F"
                 }
             ],
-            "custom_product_code": "'.$randomName.'",
-            "product_name": "Photo Card '.$randomName.'",
+            "custom_product_code": "'.$custom_product_code.'",
+            "product_name": "'.$product_name.'",
             "eng_product_name": "Photo Card1 '.$randomName.'",
             "supply_product_name": "Photo Card2 '.$randomName.'",
             "internal_product_name": "Photo Card3 '.$randomName.'",
@@ -43,10 +58,17 @@ for($i=0;$i<$loop;$i++){
             "supply_price": "'.$price.'.00",
             "has_option": "F",
             "image_upload_type": "A",
-            "detail_image": "/web/product/sample/photo_f_'.rand(1,10).'.png",
+            "detail_image": "'.$detail_image.'",
             "additional_image": [
-                "web/product/sample/photo_b.png"
+                "'.$additional_image.'"
             ],
+            "product_tag" : "'.$search.'",
+            "additional_information" : {
+                "custom_option1": "'.$airtist_member.'",
+                "custom_option2": "'.$airtist.'",
+                "custom_option3": "퀄리티",
+                "custom_option4": "'.$airtist.'",
+            },
             "manufacturer_code": "M0000000",
             "supplier_code": "S0000000",
             "brand_code": "B0000000",
@@ -152,55 +174,61 @@ for($i=0;$i<$loop;$i++){
     }';
     $method = 'POST';
     $sEndPointUrl = "https://".$_SESSION['mall_id'].".cafe24api.com/api/v2/admin/products";
-    
 
-    
+
+
     // 시작
     $curl = curl_init();
     curl_setopt_array($curl, array(
-      CURLOPT_URL => $sEndPointUrl,
-      CURLOPT_RETURNTRANSFER => true,
-      CURLOPT_CUSTOMREQUEST => 'POST',
-      CURLOPT_POSTFIELDS => $data,
-      CURLOPT_HTTPHEADER => array(
-        'Authorization: Bearer '.$_SESSION['access_token'],
-        'Content-Type: application/json',
-        'X-Cafe24-Api-Version: 2022-06-01'
-      ),
+        CURLOPT_URL => $sEndPointUrl,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => $data,
+        CURLOPT_HTTPHEADER => array(
+            'Authorization: Bearer '.$_SESSION['access_token'],
+            'Content-Type: application/json',
+            'X-Cafe24-Api-Version: 2022-06-01'
+        ),
     ));
     $response = curl_exec($curl);
+
+    // 오류 확인
+    echo $response;
+    //debug($response)
+    exit;
+
     $response = json_decode($response,true);
     $err = curl_error($curl);
     if ($err) {
-      echo 'cURL Error #:' . $err;
+        echo 'cURL Error #:' . $err;
     }
     // 종료
-    
+
     if($response['error']){
         $n2++;
         $i--;
     }
-    
+
     if($n1 > 50) break;
 
 }
 
 
-    if($loop==1){
-        debug($data);
-        debug("Response");
-        debug($response);
-        echo "
+if($loop==1){
+    debug($data);
+    debug("Response");
+    debug($response);
+    echo "
             <a href='dummyProductList.php?limit=1&pno=".$response['product']['product_no']."';>상품보기</a>
         ";
-    }else{
-        debug("loop : ".$n1);
-        debug("실패 : ".$n2);
-        debug("성공 : ".$i);
+}else{
+    debug("loop : ".$n1);
+    debug("실패 : ".$n2);
+    debug("성공 : ".$i);
 
-        echo "
+    echo "
             <a href='dummyProductList.php';>상품보기</a>
         ";
-    }
+}
 
 exit;
