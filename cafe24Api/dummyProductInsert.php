@@ -10,10 +10,9 @@ for($i=0;$i<$loop;$i++){
     $n1++;
     
     #변수설정
-    //$category = rand(24,25);
-    $category = 25;
+    $category = rand(24,25);
     $product_condition = ($category==24) ? "U" : "N";
-    $product_used_month = ($product_condition=="U") ? 2 : "";
+    $product_used_month = ($product_condition=="U") ? 2 : "0";
     $randomName = random_str_generator(8);
     $price = rand(10,500) * 100;
     $endDate = date('Y-m-d', strtotime( '+'.mt_rand(0,30).' days'));
@@ -58,7 +57,7 @@ for($i=0;$i<$loop;$i++){
                 "end_date": "'.$endDate.'"
             },
     
-            "price_content": "Sample Content",
+            "price_content": "'.number_format($price).'",
             "buy_limit_by_product": "T",
             "buy_limit_type": "M",
             "buy_group_list": [
@@ -174,7 +173,7 @@ for($i=0;$i<$loop;$i++){
     $err = curl_error($curl);
     if ($err) {
       echo 'cURL Error #:' . $err;
-    } 
+    }
     // 종료
     
     if($response['error']){
@@ -199,10 +198,8 @@ for($i=0;$i<$loop;$i++){
         debug("실패 : ".$n2);
         debug("성공 : ".$i);
 
-        sleep(5);
-        
         echo "
-            <script>location.href='dummyProductList.php';</script>
+            <a href='dummyProductList.php';>상품보기</a>
         ";
     }
 
