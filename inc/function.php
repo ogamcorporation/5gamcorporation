@@ -66,6 +66,18 @@
         return $return;
     }
     
+    // 로그 (파일)
+    function filelog($fileName = 'Log', $logTxt = '')
+    {
+        $dir = $_SERVER['DOCUMENT_ROOT'].'/log/';
+        $date = date("Y-m-d");
+        $fn_log = $fileName . '_' . $date . '.log';
+        $ff_log = (file_exists($dir . $fn_log) != false) ? 'a' : 'w';
+        $fp_log = fopen($dir . $fn_log, $ff_log);
+        fwrite($fp_log, date("Y-m-d H:i:s") . " - " . $logTxt . "\r\n\r\n");
+        fclose($fp_log);
+    }
+    
     function get_product($pno){
         $curl = curl_init();
         curl_setopt_array($curl, array(

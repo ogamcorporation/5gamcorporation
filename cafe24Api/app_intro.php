@@ -19,13 +19,16 @@ user_name = 홍태원
 user_type = P
 hmac = zECrr/790Kkt+zdPY9my+7At236caYoMxmfPy8jUPjI=
 */
+
+$_mall_id = $_GET['mall_id'] ? $_GET['mall_id'] : 'danalentermarket';
 ?>
 
 <div>
      <br> - 앱실행 완료 - <br>
-    <p> <a href="AuthorizeAccess.php?mallid=<?=$_GET['mall_id']?>"> API 자격증명 얻기</a> </p>
-    
-    <?if($_SESSION['mall_id']){?>
-    <p> <a href="apiList.php">API 리스트</a> </p>
+    <p> <a href="AuthorizeAccess.php?mallid=<?=$_mall_id?>"> 오감 인증</a> </p>
+    <p> <a href="AuthorizeAccess.php?mallid=<?=$_mall_id?>&type=BE"> B/E 인증</a> </p>
+    <p> <a href="AuthorizeAccess.php?mallid=<?=$_mall_id?>&type=FE"> F/E 인증</a> </p>
+    <?if($_SERVER['REMOTE_ADDR']=='211.109.227.238'){?>
+    <p> <a href="AuthorizeAccess.php?mallid=<?=$_mall_id?>&type=TEST"> 테스트</a> </p>
     <?}?>
 </div>

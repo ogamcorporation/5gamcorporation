@@ -16,12 +16,12 @@ if(!$_GET['code']){
 
 $sClientId = $client_id;
 $sClientSecret = $client_secret;
-$sThisUrl = $redirect_uri['Ogam'];   // https:// 사용
+$sThisUrl = $redirect_uri['FE'];   // https:// 사용
 $sCode = $_REQUEST['code'];//2번 응답의 'code'
 $sStatus = $_REQUEST['state'];//2번 응답의 'state'
 // 이하 공통
 $aStatue = json_decode(base64_decode($sStatus), true);
-debug('Ogam');
+debug('FE');
 debug($aStatue);
 $aFields = array(
     'grant_type'   => 'authorization_code',
@@ -39,7 +39,6 @@ curl_setopt_array($oCurl, array(
 ));
 $sResponse = curl_exec($oCurl);
 // 정상 토큰발급 응답인지 확인용 출력해보기
-debug($sResponse);
 
 $arr=json_decode($sResponse,true);
 debug($arr);
@@ -73,7 +72,3 @@ if($arr['access_token']){
 	$ret = $NDO->prepare($sql);
 	$ret->execute();
 }
-?>
-<div>
-    <p> <a href="dummyProductList.php">상품 리스트 API</a> </p>
-</div>

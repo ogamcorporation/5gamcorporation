@@ -1,4 +1,4 @@
-<?php
+$release_date<?php
 include_once $_SERVER['DOCUMENT_ROOT']."/inc/inc.php";
 include_once $_SERVER['DOCUMENT_ROOT']."/inc/dummyNavi.php";
 
@@ -6,7 +6,7 @@ $n1=0;
 $n2=0;
 $loop = ($_GET['loop']) ? $_GET['loop'] : 1;
 for($i=0;$i<$loop;$i++){
-
+    
     $n1++;
 
     /* 변수설정 */
@@ -16,6 +16,7 @@ for($i=0;$i<$loop;$i++){
     $price = 0;
     $endDate = date('Y-m-d', strtotime( '+'.mt_rand(0,30).' days'));
     $randomName = random_str_generator(8); // 임시 포토카드ID
+    $buy_limit_type = "M"; // 회원만 구매하기 (구매버튼 보이기)
 
     /* 플리 제공변수*/
     $shop_no = 1;
@@ -32,203 +33,121 @@ for($i=0;$i<$loop;$i++){
     $memo = "기타메모"; // 기타메모
     $hash_tag = "해시태그"; // 해시태그-  한국어/영어
     $search = $hash_tag;
-
+    
     $data = '{
         "shop_no": '.$shop_no.',
         "request": {
-            "display": "T",
-            "selling": "T",
             "product_condition": "'.$product_condition.'",
             "product_used_month": '.$product_used_month.',
             "add_category_no": [
                 {
-                    "category_no": '.$category.',
-                    "recommend": "F",
-                    "new": "F"
+                    "category_no": '.$category.'
                 }
             ],
             "custom_product_code": "'.$custom_product_code.'",
             "product_name": "'.$product_name.'",
             "eng_product_name": "Photo Card1 '.$randomName.'",
-            "supply_product_name": "Photo Card2 '.$randomName.'",
-            "internal_product_name": "Photo Card3 '.$randomName.'",
-            "model_name": "A1865",
             "price": "'.$price.'.00",
-            "retail_price": "0.00",
             "supply_price": "'.$price.'.00",
-            "has_option": "F",
             "image_upload_type": "A",
             "detail_image": "'.$detail_image.'",
             "additional_image": [
                 "'.$additional_image.'"
             ],
-            "product_tag" : "'.$search.'",
-            "additional_information" : {
-                "custom_option1": "'.$airtist_member.'",
-                "custom_option2": "'.$airtist.'",
-                "custom_option3": "퀄리티",
-                "custom_option4": "'.$airtist.'",
-            },
-            "manufacturer_code": "M0000000",
-            "supplier_code": "S0000000",
-            "brand_code": "B0000000",
-            "trend_code": "T0000000",
-            "product_weight": "1.00",
-            "expiration_date": {
-                "start_date": "2017-09-08",
-                "end_date": "'.$endDate.'"
-            },
-    
-            "price_content": "'.number_format($price).'",
-            "buy_limit_by_product": "T",
-            "buy_limit_type": "M",
-            "buy_group_list": [
-                1
-            ],
-            "repurchase_restriction": "F",
-            "single_purchase_restriction": "F",
-            "buy_unit_type": "O",
-            "buy_unit": 1,
-            "order_quantity_limit_type": "O",
-            "minimum_quantity": 1,
-            "maximum_quantity": 0,
-            "points_by_product": "T",
-            "points_setting_by_payment": "C",
-            "points_amount": [
+            "additional_information" : [
                 {
-                    "payment_method": "cash",
-                    "points_rate": "100.00",
-                    "points_unit_by_payment": "W"
+                    "key": "custom_option1",
+                    "value": "'.$airtist_member.'"
                 },
                 {
-                    "payment_method": "mileage",
-                    "points_rate": "10.00",
-                    "points_unit_by_payment": "P"
-                }
-            ],
-            "except_member_points": "F",
-            "product_volume": {
-                "use_product_volume": "T",
-                "product_width": 3,
-                "product_height": 5.5,
-                "product_length": 7
-            },
-            "description": "Sample Description.",
-            "mobile_description": "Sample Mobile Description.",
-            "translated_description": "",
-            "summary_description": "This is Product Summary.",
-            "simple_description": "This is Product Description.",
-            "edibot_code": "N190805_1501_1B3B6973_5603E1CA",
-            "payment_info": "Sample payment info. You have to Pay.",
-            "shipping_info": "Sample shipping info. You have to ship.",
-            "exchange_info": "Sample exchange info. You have to exchange.",
-            "service_info": "Sample service info. You have to service.",
-            "hscode": "4303101990",
-            "relational_product": [
-                {
-                    "product_no": 9,
-                    "interrelated": "T"
+                    "key": "custom_option4",
+                    "value": "'.$airtist.'"
                 },
                 {
-                    "product_no": 10,
-                    "interrelated": "F"
-                }
-            ],
-            "shipping_scope": "A",
-            "shipping_fee_by_product": "T",
-            "shipping_method": "01",
-            "shipping_period": {
-                "minimum": 4,
-                "maximum": 10
-            },
-            "shipping_area": "All around world",
-            "shipping_fee_type": "D",
-            "clearance_category_code": "ACAB0000",
-            "shipping_rates": [
-                {
-                    "shipping_rates_min": "2000.00",
-                    "shipping_rates_max": "4000.00",
-                    "shipping_fee": "5000.00"
+                    "key": "custom_option6",
+                    "value": "'.$event.'"
                 },
                 {
-                    "shipping_rates_min": "4000.00",
-                    "shipping_rates_max": "6000.00",
-                    "shipping_fee": "2500.00"
+                    "key": "custom_option7",
+                    "value": "'.$memo.'"
+                },
+                {
+                    "key": "custom_option8",
+                    "value": "'.$hash_tag.'"
                 }
             ],
-            "product_material": "Aluminum",
-            "english_product_material": "Aluminum",
-            "cloth_fabric": "knit",
-            "classification_code": "C000000A",
-            "additional_price": "1100.00",
-            "margin_rate": "10.00",
-            "tax_type": "A",
-            "tax_rate": 10,
-            "prepaid_shipping_fee": "P",
-            "origin_classification": "F",
-            "origin_place_no": 1798,
-            "made_in_code": "KR",
+            "release_date" : "'.$release_date.'", 
             "exposure_limit_type": "A"
     
         }
     }';
     $method = 'POST';
     $sEndPointUrl = "https://".$_SESSION['mall_id'].".cafe24api.com/api/v2/admin/products";
+    
 
-
-
+    
     // 시작
     $curl = curl_init();
     curl_setopt_array($curl, array(
-        CURLOPT_URL => $sEndPointUrl,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS => $data,
-        CURLOPT_HTTPHEADER => array(
-            'Authorization: Bearer '.$_SESSION['access_token'],
-            'Content-Type: application/json',
-            'X-Cafe24-Api-Version: 2022-06-01'
-        ),
+      CURLOPT_URL => $sEndPointUrl,
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_CUSTOMREQUEST => 'POST',
+      CURLOPT_POSTFIELDS => $data,
+      CURLOPT_HTTPHEADER => array(
+        'Authorization: Bearer '.$_SESSION['access_token'],
+        'Content-Type: application/json',
+        'X-Cafe24-Api-Version: 2022-06-01'
+      ),
     ));
-    $response = curl_exec($curl);
+    $response_org = curl_exec($curl);
+    $http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
-    // 오류 확인
-    echo $response;
-    //debug($response)
-    exit;
+    debug($http_code);
+    debug($response_org);
 
-    $response = json_decode($response,true);
+    $response = json_decode($response_org,true);
+    filelog('productInsert',$http_code." : ".$response['product']['product_no']." - ".$sEndPointUrl); // 파일로그 남기기 #01
+    
+    
     $err = curl_error($curl);
     if ($err) {
-        echo 'cURL Error #:' . $err;
+      filelog('productInsert',$err); // 실패 파일로그 남기기 #02
+      echo 'cURL Error #:' . $err;
+    }
+    
+    else if($http_code!='201' || !$response['product']['product_no']){
+        filelog('productInsert',$response_org); // 실패 파일로그 남기기 #02
+        
+        debug($data);
+        debug("Response");
+        debug($response);
+        exit;
     }
     // 종료
-
-    if($response['error']){
-        $n2++;
-        $i--;
-    }
-
+    
     if($n1 > 50) break;
 
 }
 
 
-if($loop==1){
-    debug($data);
-    debug("Response");
-    debug($response);
-    echo "
+    if($loop==1){
+        debug($data);
+        debug("Response");
+        debug($response);
+        echo "<script>location.href='dummyProductList.php';</script>";
+        echo "
             <a href='dummyProductList.php?limit=1&pno=".$response['product']['product_no']."';>상품보기</a>
         ";
-}else{
-    debug("loop : ".$n1);
-    debug("실패 : ".$n2);
-    debug("성공 : ".$i);
+    }else{
+        debug("loop : ".$n1);
+        debug("실패 : ".$n2);
+        debug("성공 : ".$i);
 
-    echo "
-            <a href='dummyProductList.php';>상품보기</a>
+        sleep(5);
+        
+        echo "
+            <script>location.href='dummyProductList.php';</script>
         ";
-}
+    }
 
 exit;
