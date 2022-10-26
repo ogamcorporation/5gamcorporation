@@ -25,11 +25,6 @@ $_mall_id = $_GET['mall_id'] ? $_GET['mall_id'] : 'danalentermarket';
 
 <div>
      <br> - 앱실행 완료 - <br>
-    <p> <a href="AuthorizeAccess.php?mallid=<?=$_mall_id?>"> 오감 인증</a> </p>
     <p> <a href="AuthorizeAccess.php?mallid=<?=$_mall_id?>&type=BE1"> B/E 인증 [auth-code]</a> </p>
     <p> <a href="AuthorizeAccess.php?mallid=<?=$_mall_id?>&type=BE2"> B/E 인증 [auth-token]</a> </p>
-    <p> <a href="AuthorizeAccess.php?mallid=<?=$_mall_id?>&type=FE"> F/E 인증</a> </p>
-    <?if($_SERVER['REMOTE_ADDR']=='211.109.227.238'){?>
-    <p> <a href="AuthorizeAccess.php?mallid=<?=$_mall_id?>&type=TEST"> 테스트</a> </p>
-    <?}?>
 </div>

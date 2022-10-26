@@ -43,6 +43,5 @@ $result = array(
 );
 $result = json_encode($result);
 
-filelog('SSO_Login',"#003-1 : ".$result); // 파일로그 남기기
 
 exit($result);

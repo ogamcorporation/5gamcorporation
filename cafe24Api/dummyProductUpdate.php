@@ -1,4 +1,4 @@
-$release_date<?php
+<?php
 include_once $_SERVER['DOCUMENT_ROOT']."/inc/inc.php";
 include_once $_SERVER['DOCUMENT_ROOT']."/inc/dummyNavi.php";
 

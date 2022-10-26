@@ -1,4 +1,4 @@
-$release_date<?php
+<?php
 include_once $_SERVER['DOCUMENT_ROOT']."/inc/inc.php";
 include_once $_SERVER['DOCUMENT_ROOT']."/inc/dummyNavi.php";
 
@@ -13,7 +13,7 @@ for($i=0;$i<$loop;$i++){
     $category = rand(24,25); //중고카테고리 24, 스토어카테고리 25
     $product_condition = ($category==24) ? "U" : "N"; //중고 U, 신품 N
     $product_used_month = ($product_condition=="U") ? 2 : "0"; // 중고 2개월, 신품 0개월
-    $price = 0;
+    $price = rand(20,200) * 100;
     $endDate = date('Y-m-d', strtotime( '+'.mt_rand(0,30).' days'));
     $randomName = random_str_generator(8); // 임시 포토카드ID
     $buy_limit_type = "M"; // 회원만 구매하기 (구매버튼 보이기)
@@ -33,6 +33,9 @@ for($i=0;$i<$loop;$i++){
     $memo = "기타메모"; // 기타메모
     $hash_tag = "해시태그"; // 해시태그-  한국어/영어
     $search = $hash_tag;
+    
+    $display =  "T";
+    $selling = "T";
     
     $data = '{
         "shop_no": '.$shop_no.',
@@ -54,21 +57,23 @@ for($i=0;$i<$loop;$i++){
             "additional_image": [
                 "'.$additional_image.'"
             ],
+            "display": "'.$display.'",
+            "selling": "'.$selling.'",
             "additional_information" : [
                 {
-                    "key": "custom_option1",
+                    "key": "custom_option11",
                     "value": "'.$airtist_member.'"
                 },
                 {
-                    "key": "custom_option4",
+                    "key": "custom_option9",
                     "value": "'.$airtist.'"
                 },
                 {
-                    "key": "custom_option6",
+                    "key": "custom_option12",
                     "value": "'.$event.'"
                 },
                 {
-                    "key": "custom_option7",
+                    "key": "custom_option13",
                     "value": "'.$memo.'"
                 },
                 {

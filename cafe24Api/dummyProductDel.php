@@ -27,8 +27,6 @@ foreach($product_no as $productNo){
     $sEndPointUrl = "https://{$_SESSION['mall_id']}.cafe24api.com/api/v2/admin/products/{$productNo}";
     $response = curl_call($sEndPointUrl, $method);
 
-    debug($response);
-    exit;
 
     $err = curl_error($curl);
     if ($err) {
