@@ -1,0 +1,1 @@
+CAFE24API.init({ client_id : 'zDk2jxpAKFDgaPGnCoaMWA', version : '2022-06-01' })
