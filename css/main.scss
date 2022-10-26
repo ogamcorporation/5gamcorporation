@@ -339,6 +339,8 @@ h3{
   padding: 117px 100px 117px 100px;
   font-family: spoqa;
   height: auto;
+  overflow: hidden;
+  cursor: pointer;
   h2{
     font-size: 40px;
     text-align: center;
@@ -387,7 +389,7 @@ h3{
     border-radius: 15px;
     width: 168px;
     height: 50px;
-    margin: 39px auto 0;
+    margin: 20px auto;
   }
   .thankyou_message{
     @include translate-50;
@@ -417,6 +419,10 @@ h3{
   background-size: 100%;
   width: 30px;
   height: 30px;
+}
+
+input.g-recaptcha {
+  margin: 20px auto;
 }
 
 
