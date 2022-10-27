@@ -71,8 +71,8 @@ ul{list-style: none;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
 img{vertical-align: top;}
 button{border: none;background: none;cursor: pointer;}
-input[type="text"]{border: none;border-radius: 0;outline: none}
-button, input{font-family: inherit;font-size: inherit;color: inherit;}
+input[type="text"],input[type="password"], select {border: none;border-radius: 0;outline: none}
+button, input, select{font-family: inherit;font-size: inherit;color: inherit;}
 th,td,table{padding: 0;margin: 0;border-spacing:0px;}
 address{font-style: normal;}
 header, nav, section, footer{display: block;}

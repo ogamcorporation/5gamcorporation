@@ -1,0 +1,99 @@
+@charset "utf-8";
+@import "_var", "_mixin";
+
+/* header */
+body{ background-color: #f3f3f3}
+*{box-sizing: border-box;}
+.max1720{
+  @include flex;
+  @include align-items;
+  @include justify-content(space-between);
+  height: 70px;
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+header{
+  background: #fff;
+  .bo_header{border-bottom: 2px solid #062c5e;}
+  .logo img{ width: 98px;}
+  .profile{
+    @include flex;
+    @include align-items;
+    p{
+      margin-left: 9px;
+      font-size: 13px;}
+  }
+}
+
+.content{
+  padding-top: 40px;
+  h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000033;
+    margin-bottom: 70px;
+  }
+  h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 39px;}
+  .form_login {
+    position: absolute;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(92, 92, 92, 0.1);
+    padding: 50px 140px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #cacaca;
+    border-radius: 10px;
+    .field_container{
+      .icon{
+        position: absolute;
+        right: 0;
+      }
+      &:last-child{
+        width: 100%;
+        text-align: center;
+      }
+      &.on{border-bottom-color: #4e8abe;}
+      &.on .icon{display: none;}
+    }
+    .field_container:not(:last-child){
+      position: relative;
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      padding: 15px 0 !important;
+      margin-top: 26px;
+    }
+    .field{
+      outline: none;
+      color: #555555;
+      font-weight: 700;
+      width: 100%;
+      &::placeholder{
+        color: #999;
+        font-size: 14px;
+        font-weight: 400;}
+    }
+  }
+  .submit {
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #c5deff;
+    color: #333333;
+    border-radius: 17px;
+    width: 80px;
+    height: 34px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 50px;
+  }
+}

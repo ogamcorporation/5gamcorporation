@@ -173,7 +173,7 @@ $(document).ready(function () {
         } else{
             $('.road2').removeClass('on');
         }
-        console.log(scrollTop, road1);
+        // console.log(scrollTop, road1);
     });
 
     $('.illust').each(function (idx, ele) {
