@@ -40,6 +40,7 @@ h3{
 .swiper-button-next:after{
   transform: rotate(180deg);
 }
+.brightness{filter: brightness(100);}
 .section1{
   .swiper-container{
     width: 100%;
@@ -306,7 +307,7 @@ h3{
     padding-top: 80px;
 
     & h2.on {
-      font-size: 4vw;
+      font-size: 58px;
       transition: 1s;
     }
 
@@ -529,6 +530,8 @@ h3{
 
 .section7 {
   //&.hide{opacity: 0;}
+  opacity: 0;
+  transition: 0.5s;
   h2{
     text-align: center;
     font-size: 80px;
@@ -630,7 +633,7 @@ h3{
     }
   }
   .section6{
-    .top_line,.bottom_line{height: 40px;}
+    .top_line,.bottom_line{height: 100px;}
     .btn_more{
       p{
         font-size: 20px;
@@ -674,6 +677,7 @@ h3{
   }
 
   .section7{
+    //transition: 3s;
     h2{
       font-size: 43px;
     }
@@ -728,7 +732,7 @@ h3{
       padding-top: 45px;
     }
     .client_list{
-      padding: 40px 20px 40px 20px;
+      padding: 80px 20px 40px 20px;
     }
     ul{
       padding-bottom:60px;
@@ -736,9 +740,11 @@ h3{
     ul li{
       width: 33.33%;
     }
+    .top_line,.bottom_line{height: 60px;}
     .bottom_line{
       margin-bottom: 100px;
     }
+
   }
 
   .section7{
@@ -792,5 +798,20 @@ h3{
       }
     }
   }
+  .section5{
+    padding-top: 100px;
+  }
+  .section6{
+    .movetxt{
+      & h2.on {
+        font-size: 35px;
+        transition: 1s;
+      }
+    }
 
+    ul li{
+      width: 50%;
+    }
+    .top_line,.bottom_line{height: 40px;}
+  }
 }

@@ -207,20 +207,17 @@ $(document).ready(function () {
 
     });
 
-    // section7 fade효과 - 2022.10.28 임보라 추가
-    // let sec7Height = $(this).height();
-    // $(".hide").hide();
-    // $(window).scroll( function(){
-    //     let rollIt = $(this).height() - sec7Height;
-    //
-    //     if($(window).scrollTop() == rollIt){
-    //         alert('sss');
-    //     }
-    //
-    //     console.log()
-    //     console.log()
-    //     console.log(sec7Height)
-    // });
+
+    //section7 fade효과 - 2022.10.28 임보라 추가
+    let rollIt = $('.section7').offset().top + -300;
+    $(window).scroll( function(){
+
+        if($(window).scrollTop() >= rollIt){
+            $('.section7').css('opacity',1);
+            // alert('sss')
+        }
+
+    });
 
 
 
@@ -228,15 +225,18 @@ $(document).ready(function () {
     $(window).scroll(function(){
 
         //메뉴버튼 흰색으로 변경
+        //로고이미지 흰색으로 변경
         let sec6Top = $('.top_line').offset().top + -80;
-        // let sec6Bottom = $('.section7').offset().top;
-        // let onTop = $(document).height() - $(window).height() - $('footer').height();
         let scrollVar = $(this).scrollTop();
         let menuBtn = $('.nav_btn');
+        let logoImg = $('.logo img');
+
         if(scrollVar >= sec6Top){
             menuBtn.addClass('onBtn');
+            logoImg.addClass('brightness');
         }else{
             menuBtn.removeClass('onBtn');
+            logoImg.removeClass('brightness');
         }
 
 
@@ -249,8 +249,6 @@ $(document).ready(function () {
             sec6Title.removeClass('on');
         }
     });
-
-
 
 
 });
