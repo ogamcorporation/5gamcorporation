@@ -157,6 +157,51 @@ $(document).ready(function () {
       else $(this).removeClass('on');
     });
 
+    // section7 fade효과 - 2022.10.28 임보라 추가
+    // let sec7Height = $(this).height();
+    // $(".hide").hide();
+    // $(window).scroll( function(){
+    //     let rollIt = $(this).height() - sec7Height;
+    //
+    //     if($(window).scrollTop() == rollIt){
+    //         alert('sss');
+    //     }
+    //
+    //     console.log()
+    //     console.log()
+    //     console.log(sec7Height)
+    // });
+
+
+
+    // 스크롤이 section6 도달시 - 2022.10.28 임보라 추가
+    $(window).scroll(function(){
+
+        //메뉴버튼 흰색으로 변경
+        let sec6Top = $('.top_line').offset().top + -80;
+        // let sec6Bottom = $('.section7').offset().top;
+        // let onTop = $(document).height() - $(window).height() - $('footer').height();
+        let scrollVar = $(this).scrollTop();
+        let menuBtn = $('.nav_btn');
+        if(scrollVar >= sec6Top){
+            menuBtn.addClass('onBtn');
+        }else{
+            menuBtn.removeClass('onBtn');
+        }
+
+
+        //타이틀텍스트 크기 작게
+        let sec6Title = $('#section6 h2');
+        let sec6Y = $('.top_line').offset().top + -1000;
+        if(scrollVar >= sec6Y){
+            sec6Title.addClass('on');
+        }else{
+            sec6Title.removeClass('on');
+        }
+    });
+
+
+
 
     // 스크롤이 근처에 도달시 애니메이션 실행
     const scrollTop = $(this).scrollTop();

@@ -163,6 +163,10 @@ html {
 .header .nav_btn.on #dim {
   display: block;
 }
+.header .nav_btn.onBtn {
+  background: #fff;
+  transition: 0.3s;
+}
 .header .nav_btn .line {
   position: absolute;
   top: 0;
@@ -175,6 +179,9 @@ html {
   width: 25px;
   height: 2px;
   background: #fff;
+}
+.header .nav_btn.onBtn .line {
+  background: #000;
 }
 .header .nav_btn .line1 {
   top: 35%;

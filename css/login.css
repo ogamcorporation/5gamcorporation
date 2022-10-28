@@ -1,0 +1,125 @@
+/* header */
+body {
+  background-color: #f3f3f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.max1720 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  height: 70px;
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+header {
+  background: #fff;
+}
+header .bo_header {
+  border-bottom: 2px solid #062c5e;
+}
+header .logo img {
+  width: 98px;
+}
+header .profile {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+header .profile p {
+  margin-left: 9px;
+  font-size: 13px;
+}
+
+.content {
+  padding-top: 40px;
+}
+.content h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000033;
+  margin-bottom: 70px;
+}
+.content h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 39px;
+}
+.content .form_login {
+  position: absolute;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(92, 92, 92, 0.1);
+  padding: 50px 140px;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px #cacaca;
+  border-radius: 10px;
+}
+.content .form_login .field_container .icon {
+  position: absolute;
+  right: 0;
+}
+.content .form_login .field_container:last-child {
+  width: 100%;
+  text-align: center;
+}
+.content .form_login .field_container.on {
+  border-bottom-color: #4e8abe;
+}
+.content .form_login .field_container.on .icon {
+  display: none;
+}
+.content .form_login .field_container:not(:last-child) {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0 !important;
+  margin-top: 26px;
+}
+.content .form_login .field {
+  outline: none;
+  color: #555555;
+  font-weight: 700;
+  width: 100%;
+}
+.content .form_login .field::placeholder {
+  color: #999;
+  font-size: 14px;
+  font-weight: 400;
+}
+.content .submit {
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #c5deff;
+  color: #333333;
+  border-radius: 17px;
+  width: 80px;
+  height: 34px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+/*# sourceMappingURL=login.css.map */

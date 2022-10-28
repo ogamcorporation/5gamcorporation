@@ -119,6 +119,10 @@ html{
     &.on #dim{
       display: block;
     }
+    &.onBtn{
+      background: #fff;
+      transition: 0.3s;
+    }
     .line{
       position: absolute;
       top: 0;
@@ -127,6 +131,9 @@ html{
       width: 25px;
       height: 2px;
       background: #fff;
+    }
+    &.onBtn .line{
+      background: #000;
     }
     .line1{
       top: 35%;
