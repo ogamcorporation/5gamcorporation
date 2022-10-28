@@ -154,13 +154,13 @@ h3{
         animation: blink 0.7s infinite;
         @keyframes blink {
           0% {
-              opacity: 1;
+            opacity: 1;
           }
           50% {
-              opacity: 0;
+            opacity: 0;
           }
           100% {
-              opacity: 1;
+            opacity: 1;
           }
         }
       }
@@ -169,7 +169,7 @@ h3{
         display: none;
       }
     }
-    
+
     .txt_right{
       position: relative;
       right: 60px;
@@ -199,12 +199,12 @@ h3{
     padding: 20px 91.5px 36px 59px;
   }
   .movetxt{
-    white-space: nowrap; 
+    white-space: nowrap;
     position: absolute;
     top: 45px;
     right: 0;
     .parallax_txt{
-      transition: 0.22s; 
+      transition: 0.22s;
     }
 
     h2{
@@ -235,7 +235,25 @@ h3{
     right: 0;
   }
   .swiper-slide{
+    position: relative;
     cursor: pointer;
+    overflow: hidden;
+  }
+  .swiper-slide::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s;
+  }
+  .swiper-slide:hover::before,
+  .swiper-slide:focus::before{
+    opacity: 0.6;
   }
   .swiper-slide img{
     width: 100%;
@@ -245,6 +263,27 @@ h3{
   .swiper-slide:hover img,
   .swiper-slide:focus img{
     transform: scale(1.1);
+  }
+  .append_txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .swiper-slide:hover .append_txt,
+  .swiper-slide:focus .append_txt{
+    opacity: 1;
+  }
+
+  .port_mo > div:first-of-type{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 1fr 1fr 1fr */
+    column-gap: 20px;
+    row-gap: 20px;
   }
 
 }
@@ -529,7 +568,6 @@ h3{
     border-width: 1px;
     border-radius: 20px;
     padding: 1.111vw 0.9722vw;
-    margin-bottom: 2.5vw;
     line-height: 2.0833vw;
   }
   .section2{
@@ -558,11 +596,11 @@ h3{
           font-size: 6.9444vw;
         }
       }
-      
-      .txt_right{
+
+      /*.txt_right{
         font-size: 1.3889vw;
         line-height: 2.0833vw;
-      }
+      }*/
       h4{
         font-size: 2.7778vw;
       }
@@ -605,8 +643,21 @@ h3{
 
 
 }
-//태블릿
-@media screen and (max-width: 1024px) {
+
+
+
+
+// 가영: section1, 3, 5 반응형
+@media all and (max-width:1024px){
+  .section1{
+    .swiper-container{
+      height: 70vh !important;
+      .swiper-button-prev{left: 0;}
+      .swiper-button-next{right: 0;}
+      .swiper-button-prev, .swiper-button-next{ top: 40%;}
+    }
+  }
+
   .section4{
     .movetxt{
       right: 10px;
@@ -621,6 +672,7 @@ h3{
     }
 
   }
+
   .section7{
     h2{
       font-size: 43px;
@@ -630,10 +682,47 @@ h3{
       height: 500px;
     }
   }
-}
-//모바일
-@media screen and (max-width: 576px) {
 
+
+
+}
+
+// 반응형
+@media all and (max-width:768px){
+  h3{
+    font-size: 30px;
+    padding: 15px 10px;
+  }
+  .section1{
+    .swiper-container{
+      height: 50vh !important;
+      .swiper-button-prev:after, .swiper-button-next:after{ width: 29px; height: 47px;}
+    }
+  }
+  .section3{
+    padding: 0 30px;
+    .hire_cnt{
+      padding: 50px 0 30px;
+      .txt_wrap{
+        width: calc(100% - 60px);
+        padding: 90px 0 30px;
+        strong{font-size: 50px}
+      }
+      .txt_right{
+        padding-top: 60px;
+        font-size: 20px;
+        line-height: 30px;
+        right: 0;
+        margin-right: 20px;
+        height: 146px;
+      }
+      h4{font-size: 20px}
+    }
+  }
+  .section5{
+    .swiper-button-prev, .swiper-button-next{width: auto; height: auto;}
+    .swiper-button-prev:after, .swiper-button-next:after{ width: 29px; height: 47px;}
+  }
   .section6{
     .movetxt{
       padding-top: 45px;
@@ -677,4 +766,31 @@ h3{
       }
     }
   }
+}
+
+@media all and (max-width:480px){
+  h3 {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .section3{
+    .hire_cnt{
+      .txt_wrap{
+        padding: 70px 15px 30px;
+        height: 320px;
+        strong{font-size: 40px}
+      }
+      .txt_right{
+        font-size: 16px;
+        line-height: 20px;
+        height: 125px;
+        margin-right: 0;
+      }
+      h4{
+        padding-top: 40px;
+        font-size: 18px;
+      }
+    }
+  }
+
 }

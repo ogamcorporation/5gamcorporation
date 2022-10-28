@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function () {
 
     // .section1 스와이퍼
@@ -16,31 +19,6 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
     });
-
-    var swiper2 = new Swiper(".section5 .swiper-container", {
-        slidesPerView: 3,
-        spaceBetween: 50,
-        grabCursor: true,
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-            },
-        },
-    });
-
-    
 
 
     // 메뉴열기 클릭
@@ -76,7 +54,7 @@ $(document).ready(function () {
         });
 
         // 닫기
-        $('.arrow, #dim').click(function () { 
+        $('.arrow, #dim').click(function () {
             $('html, body').removeAttr('style');
             $('.nav_btn').removeClass('on').find('.blind').text('주메뉴 열기');
             $('#dim').stop().fadeOut('fast');  //dim 보이기
@@ -89,7 +67,7 @@ $(document).ready(function () {
     });
 
 
-    
+
     $(document).on('scroll', function(){
         // 오감과 함께할 당신에게,
         $('h2 .to_left').css("left", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
@@ -111,6 +89,47 @@ $(document).ready(function () {
         });
     }
     setInterval(function () { trick()}, 3700);
+
+
+
+
+
+    //section5 : 배열로 루프를 돌려볼까?
+    const dataArray=['#nike', '#converse', '#ssf','#gs','#yongwon','#nf','#discovery','#mlb','#stretchangles','#tory','#thom','#amore','#toun28','#nexen','#cancer','#kb','#lotte']
+    const portArray =['portfolio_nike.jpg', 'portfolio_converse.jpg', 'portfolio_ssf.jpg','portfolio_gsshop.jpg', 'portfolio_youngone.jpg', 'portfolio_thenorthface.jpg', 'portfolio_discovery.jpg', 'portfolio_mlb.jpg', 'portfolio_strechangels.jpg', 'portfolio_toryburch.jpg', 'portfolio_thombrown.jpg', 'portfolio_amore.jpg', 'portfolio_toun28.jpg','portfolio_nexentire.jpg','portfolio_cancercenter.jpg','portfolio_kbinsurance.jpg','portfolio_lotteinsurance.jpg']
+    const appendTxt =['NIKE', 'CONVERSE', 'SSF SHOP', 'GS SHOP', 'YOUNGONE', 'THE NORTH FACE', 'DISCOVERY', 'MLB', 'STRETCHANGLES', 'TORY BURCH', 'THOM BROWN', 'AMORE PACIFIC', 'TOUN28', 'NEXEN TIRE', '국립암센터', 'KB 손해보험', 'lOTTE 손해보험'];
+
+    for(let j = 0; j<portArray.length; j++){
+        $('.section5 .swiper-wrapper').append('<div class="md_open_btn swiper-slide" aria-haspopup="dialog" title="대화상자" data-href="' +dataArray[j] + '">'+'<img src="'+'img/'+portArray[j]+'">'+'<span class="append_txt">'+ appendTxt[j]+'</span>'+'</div>');
+    }
+
+
+    var swiper2 = new Swiper(".section5 .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 50,
+        grabCursor: true,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+        },
+    });
 
 
     // 포트폴리오 부분
@@ -135,7 +154,7 @@ $(document).ready(function () {
     //     gsap.to('.hor_long', {left: -leftMove, duration: 0.5, ease: Power3.easeOut});
     //     }
     // });
-   
+
 
     // 더보기버튼
     $('.btn_more p').click(function () {
@@ -147,14 +166,45 @@ $(document).ready(function () {
     // fade효과
     // 1) scroll 이벤트 선언
     $(window).on('scroll', function () {
-    // 2) 스크롤바의 수직 이동거리를 변수에 저장(스크롤을 빨리 움직이는 사용자를 위해 값을 더해주기)
-    const scrollY = $(this).scrollTop() + $(this).height()* 3/4;
+        // 2) 스크롤바의 수직 이동거리를 변수에 저장(스크롤을 빨리 움직이는 사용자를 위해 값을 더해주기)
+        const scrollY = $(this).scrollTop() + $(this).height()* 3/4;
 
-    // 3) 스크롤바의 수직이동거리와 나(보여질 컨텐츠)의 위치가 가까워질 경우만 .fade.on 클래스명 추가
-    $('.fade').each(function (idx, ele) {
-      if (scrollY > $(this).offset().top) $(this).addClass('on');
-      // 하단에서 상단으로 다시 올렸을때 효과가 반복되길 바란다면 추가 
-      else $(this).removeClass('on');
+        // 3) 스크롤바의 수직이동거리와 나(보여질 컨텐츠)의 위치가 가까워질 경우만 .fade.on 클래스명 추가
+        $('.fade').each(function (idx, ele) {
+            if (scrollY > $(this).offset().top) $(this).addClass('on');
+            // 하단에서 상단으로 다시 올렸을때 효과가 반복되길 바란다면 추가
+            else $(this).removeClass('on');
+        });
+
+
+        // 스크롤이 근처에 도달시 애니메이션 실행
+        const scrollTop = $(this).scrollTop();
+        $('.road').each(function (idx, ele) {
+            const road1 = $('.road1').offset().top;
+            const road2 = $('.road2').offset().top;
+            if (scrollTop + 1100 >= road1) {
+                $('.road1').addClass('on');
+            } else{
+                $('.road1').removeClass('on');
+            }
+            if (scrollTop + 1100 >= road2) {
+                $('.road2').addClass('on');
+            } else{
+                $('.road2').removeClass('on');
+            }
+            // console.log(scrollTop, road1);
+        });
+
+        $('.illust').each(function (idx, ele) {
+            const footer = $('footer').offset().top;
+            if (scrollTop + 1200 >= footer) {
+                $(this).addClass('on');
+            }
+            else{
+                $(this).removeClass('on');
+            }
+        });
+
     });
 
     // section7 fade효과 - 2022.10.28 임보라 추가
@@ -203,35 +253,6 @@ $(document).ready(function () {
 
 
 
-    // 스크롤이 근처에 도달시 애니메이션 실행
-    const scrollTop = $(this).scrollTop();
-    $('.road').each(function (idx, ele) {
-        const road1 = $('.road1').offset().top;
-        const road2 = $('.road2').offset().top;
-        if (scrollTop + 1100 >= road1) {
-            $('.road1').addClass('on');
-        } else{
-            $('.road1').removeClass('on');
-        }
-        if (scrollTop + 1100 >= road2) {
-            $('.road2').addClass('on');
-        } else{
-            $('.road2').removeClass('on');
-        }
-        // console.log(scrollTop, road1);
-    });
-
-    $('.illust').each(function (idx, ele) {
-        const footer = $('footer').offset().top;
-        if (scrollTop + 1200 >= footer) {
-            $(this).addClass('on');
-        }
-        else{
-            $(this).removeClass('on');
-        }
-    });
-
-  });
-
-
 });
+
+

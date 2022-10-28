@@ -97,6 +97,10 @@ header, nav, section, footer {
   clip-path: inset(50%);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Spoqa Han Sans Neo", sans-serif;
   font-size: 16px;
@@ -145,7 +149,7 @@ html {
   z-index: 1000;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 112px);
   height: 178px;
   padding: 0 56px;
 }
@@ -432,6 +436,35 @@ footer .illust.on {
 
 .md_close_btn.btn_black {
   background: url(../img/icon_close_btn_black.png) no-repeat center/contain !important;
+}
+
+@media all and (max-width: 1024px) {
+  .header {
+    width: calc(100% - 60px);
+    padding: 0 30px;
+    height: 120px;
+  }
+  .header .logo img {
+    height: 60px;
+  }
+  .header .nav_btn {
+    width: 38px;
+    height: 38px;
+  }
+  .header .nav_btn .line {
+    width: 20px;
+  }
+}
+@media all and (max-width: 768px) {
+  .header .logo img {
+    height: 40px;
+  }
+  .header #gnb {
+    padding-top: 55px;
+  }
+  .header #gnb ul {
+    margin-top: 90px;
+  }
 }
 
 /*# sourceMappingURL=common.css.map */

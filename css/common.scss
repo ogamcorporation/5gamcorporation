@@ -77,6 +77,7 @@ th,td,table{padding: 0;margin: 0;border-spacing:0px;}
 address{font-style: normal;}
 header, nav, section, footer{display: block;}
 .blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+*{box-sizing: border-box;}
 
 // common class
 body{
@@ -103,7 +104,7 @@ html{
   z-index: 1000;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 112px);
   height: 178px;
   padding: 0 56px;
   .logo img{
@@ -314,3 +315,33 @@ footer{
 .md_close_btn{position: absolute;top: 20px;right: 20px;width: 24px;height: 24px;background: url(../img/icon_close_btn.png) no-repeat center / contain;}
 .md_close_btn.btn_black{background: url(../img/icon_close_btn_black.png) no-repeat center / contain !important;}
 
+
+// header, nav, foote반응형
+@media all and (max-width:1024px){
+  // header
+  .header{
+    width: calc(100% - 60px);
+    padding: 0 30px;
+    height: 120px;
+    .logo img{
+      height: 60px;
+    }
+    .nav_btn{
+      width: 38px; height: 38px;
+      .line{ width: 20px }
+    }
+  }
+}
+
+@media all and (max-width:768px){
+  // header
+  .header{
+    .logo img{
+      height: 40px;
+    }
+    #gnb{
+      padding-top: 55px;
+      ul{ margin-top: 90px;}
+    }
+  }
+}
