@@ -149,13 +149,18 @@ html {
   z-index: 1000;
   top: 0;
   left: 0;
-  width: calc(100% - 112px);
+  width: 100%; /*width: calc(100% - 112px);*/
   height: 178px;
-  padding: 0 56px;
+  padding: 0px 100px 0 56px; /*padding: 0 56px;*/
 }
 .header .logo img {
   height: 80px;
   object-fit: contain;
+}
+.header.bgOn {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 145px;
 }
 .header .nav_btn {
   position: relative;
@@ -438,10 +443,14 @@ footer .illust.on {
   background: url(../img/icon_close_btn_black.png) no-repeat center/contain !important;
 }
 
+@media all and (max-width: 1440px) {
+  .header.bgOn {
+    height: 135px;
+  }
+}
 @media all and (max-width: 1024px) {
   .header {
-    width: calc(100% - 60px);
-    padding: 0 30px;
+    padding: 0 50px 0 30px;
     height: 120px;
   }
   .header .logo img {
@@ -454,6 +463,9 @@ footer .illust.on {
   .header .nav_btn .line {
     width: 20px;
   }
+  .header.bgOn {
+    height: 100px;
+  }
 }
 @media all and (max-width: 768px) {
   .header .logo img {
@@ -464,6 +476,9 @@ footer .illust.on {
   }
   .header #gnb ul {
     margin-top: 90px;
+  }
+  .header.bgOn {
+    height: 80px;
   }
 }
 

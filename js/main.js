@@ -79,13 +79,35 @@ $(document).ready(function () {
     });
 
 
+    //디바이스 크기별 리사이징
+    $(window).resize(function(){
+        if (window.innerWidth > 1440) {  // 다바이스 크기가 1440이상일때
+            $(document).on('scroll', function(){
+                // 오감과 함께할 당신에게,
+                $('h2 .to_left').css("left", Math.max(120 - 0.1*window.scrollY, 1) + "vw");
+                $('.section6 h2 .to_left').css("left", Math.max( 380 - 0.1*window.scrollY, 1) + "vw");
+                $('h2 .to_right').css("right", Math.max(120 - 0.1*window.scrollY, 1) + "vw");
+            });
 
-    $(document).on('scroll', function(){
-        // 오감과 함께할 당신에게,
-        $('h2 .to_left').css("left", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
-        $('.section6 h2 .to_left').css("left", Math.max( 380 - 0.1*window.scrollY, 1) + "vw");
-        $('h2 .to_right').css("right", Math.max(130 - 0.1*window.scrollY, 1) + "vw");
-    });
+        }else if (window.innerWidth > 768) {  // 다바이스 크기가 768이상일때
+            $(document).on('scroll', function(){
+                // 오감과 함께할 당신에게,
+                $('h2 .to_left').css("left", Math.max(80 - 0.1*window.scrollY, 1) + "vw");
+                $('.section6 h2 .to_left').css("left", Math.max( 380 - 0.1*window.scrollY, 1) + "vw");
+                $('h2 .to_right').css("right", Math.max(80 - 0.1*window.scrollY, 1) + "vw");
+            });
+
+        } else {
+            $(document).on('scroll', function(){ //모바일
+                // 오감과 함께할 당신에게,
+                $('h2 .to_left').css("left", Math.max(40 - 0.1*window.scrollY, 1) + "vw");
+                $('.section6 h2 .to_left').css("left", Math.max( 380 - 0.1*window.scrollY, 1) + "vw");
+                $('h2 .to_right').css("right", Math.max(40 - 0.1*window.scrollY, 1) + "vw");
+            });
+        }
+
+    }).resize();
+
 
 
     // section3 타이핑효과
@@ -220,6 +242,48 @@ $(document).ready(function () {
     });
 
 
+    // 스크롤이 근처에 도달시 애니메이션 실행 - 2022.10.31 임보라 추가
+    $(window).scroll(function(){
+        let scrollVar = $(this).scrollTop();
+        let header = $('.header');
+
+            //헤더 불투명배경 추가
+            if(scrollVar >= header.outerHeight()){
+                header.addClass('bgOn');
+            }else{
+                header.removeClass('bgOn');
+            }
+
+
+        let logoImg = $('.logo img');
+        let Change1Tp = $('.logoChange1').offset().top + -100;
+        let Change1Bt = Change1Tp + $('.logoChange1').outerHeight();
+        let Change2Tp = $('.logoChange2').offset().top + -100;
+        let Change2Bt = Change2Tp + $('.logoChange2').outerHeight();
+        let Change3Tp = $('.logoChange3').offset().top + -100;
+        let Change3Bt = Change3Tp + $('.logoChange3').outerHeight();
+
+        let sec6Top = $('.top_line').offset().top + -80;
+        let sec7Top = $('.section7').offset().top + -300;
+
+        console.log(Change2Tp)
+        console.log(Change2Bt)
+            //로고 - 겹침방지 , 로고 색 변경
+            if(Change1Tp <= scrollVar && Change1Bt >= scrollVar){
+                logoImg.addClass('brightness');
+            }else if(Change2Tp <= scrollVar && Change2Bt >= scrollVar){
+                logoImg.addClass('brightness');
+            }else if(Change3Tp <= scrollVar && Change3Bt >= scrollVar){
+                logoImg.addClass('brightness');
+            }else if(scrollVar >= sec6Top && scrollVar <= sec7Top){
+                logoImg.addClass('brightness');
+            }
+            else{
+                logoImg.removeClass('brightness');
+            }
+
+    });
+
     // section7 fade효과 - 2022.10.31 임보라 추가
     AOS.init();
 
@@ -228,22 +292,18 @@ $(document).ready(function () {
     $(window).scroll(function(){
 
         //메뉴버튼 흰색으로 변경
-        //로고이미지 흰색으로 변경
         let sec6Top = $('.top_line').offset().top + -80;
         let sec7Top = $('.section7').offset().top + -300;
         let scrollVar = $(this).scrollTop();
         let menuBtn = $('.nav_btn');
-        let logoImg = $('.logo img');
 
         if(scrollVar >= sec6Top && scrollVar <= sec7Top){
             menuBtn.addClass('onBtn');
-            logoImg.addClass('brightness');
         }else{
             menuBtn.removeClass('onBtn');
-            logoImg.removeClass('brightness');
         }
 
-        //타이틀텍스트 크기 작게
+        //클라이언트 타이틀텍스트 크기 작게
         let sec6Title = $('#section6 h2');
         let sec6Y = $('.top_line').offset().top + -1000;
         if(scrollVar >= sec6Y){
