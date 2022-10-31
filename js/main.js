@@ -64,6 +64,18 @@ $(document).ready(function () {
             });
         });
 
+        //네비 메뉴 클릭시 닫기 - 2022.10.31 임보라 추가
+        $('#gnb ul li').not('.md_open_btn').click(function () {
+            $('html, body').removeAttr('style');
+            $('.nav_btn').removeClass('on').find('.blind').text('주메뉴 열기');
+            $('#dim').stop().fadeOut('fast');  //dim 보이기
+
+            $gnb.stop().animate({right: '-391px'}, 300, function () {
+                $(this).css({visibility: 'hidden'}).children('ul').stop().animate({maxHeight: 0}, 'fast', function () {});
+            });
+
+        });
+
     });
 
 
