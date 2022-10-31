@@ -313,7 +313,7 @@ h3 {
   padding-top: 80px;
 }
 .section6 .movetxt h2.on {
-  font-size: 58px;
+  font-size: 100px;
   transition: 1s;
 }
 .section6 .movetxt h2.on p {
@@ -501,10 +501,6 @@ h3 {
   margin: 20px auto;
 }
 
-.section7 {
-  opacity: 0;
-  transition: 0.5s;
-}
 .section7 h2 {
   text-align: center;
   font-size: 80px;
@@ -521,7 +517,7 @@ h3 {
 }
 .section7 h4 {
   text-align: center;
-  font-size: 17px;
+  font-size: 19px;
   margin: 40px 0 30px;
 }
 .section7 #map {
@@ -576,6 +572,9 @@ h3 {
   .section4 h2 span:first-child {
     font-size: 2vw;
   }
+  .section4 .parallax_txt p {
+    margin-bottom: 20px;
+  }
   .section5 {
     padding-bottom: 200px;
   }
@@ -616,6 +615,9 @@ h3 {
   }
   .section4 .movetxt {
     right: 10px;
+  }
+  .section6 .movetxt h2.on {
+    font-size: 9vw;
   }
   .section6 .client_list {
     padding: 74px 45px 82px 45px;
@@ -667,6 +669,12 @@ h3 {
   .section3 .hire_cnt h4 {
     font-size: 20px;
   }
+  .section4 .parallax_txt p {
+    margin-bottom: 14px;
+  }
+  .section5 {
+    padding-top: 50px;
+  }
   .section5 .swiper-button-prev, .section5 .swiper-button-next {
     width: auto;
     height: auto;
@@ -674,6 +682,9 @@ h3 {
   .section5 .swiper-button-prev:after, .section5 .swiper-button-next:after {
     width: 29px;
     height: 47px;
+  }
+  .section5 .append_txt {
+    font-size: 40px;
   }
   .section6 .movetxt {
     padding-top: 45px;
@@ -694,14 +705,14 @@ h3 {
     margin-bottom: 100px;
   }
   .section7 h2 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .section7 h4 {
-    font-size: 15px;
+    font-size: 17px;
   }
   .section7 #map {
     width: 90%;
-    height: 300px;
+    height: 400px;
   }
   .section7 .contact_wrap {
     margin-bottom: 100px;
@@ -738,8 +749,14 @@ h3 {
     padding-top: 40px;
     font-size: 18px;
   }
+  .section4 .parallax_txt p {
+    margin-bottom: 11px;
+  }
   .section5 {
     padding-top: 100px;
+  }
+  .section6 .top_line, .section6 .bottom_line {
+    height: 60px;
   }
   .section6 .movetxt h2.on {
     font-size: 35px;
@@ -748,8 +765,8 @@ h3 {
   .section6 ul li {
     width: 50%;
   }
-  .section6 .top_line, .section6 .bottom_line {
-    height: 40px;
+  .section7 #map {
+    height: 376px;
   }
 }
 

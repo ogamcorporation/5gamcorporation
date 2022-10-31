@@ -208,17 +208,8 @@ $(document).ready(function () {
     });
 
 
-    //section7 fade효과 - 2022.10.28 임보라 추가
-    let rollIt = $('.section7').offset().top + -300;
-    $(window).scroll( function(){
-
-        if($(window).scrollTop() >= rollIt){
-            $('.section7').css('opacity',1);
-            // alert('sss')
-        }
-
-    });
-
+    // section7 fade효과 - 2022.10.31 임보라 추가
+    AOS.init();
 
 
     // 스크롤이 section6 도달시 - 2022.10.28 임보라 추가
@@ -227,18 +218,18 @@ $(document).ready(function () {
         //메뉴버튼 흰색으로 변경
         //로고이미지 흰색으로 변경
         let sec6Top = $('.top_line').offset().top + -80;
+        let sec7Top = $('.section7').offset().top + -300;
         let scrollVar = $(this).scrollTop();
         let menuBtn = $('.nav_btn');
         let logoImg = $('.logo img');
 
-        if(scrollVar >= sec6Top){
+        if(scrollVar >= sec6Top && scrollVar <= sec7Top){
             menuBtn.addClass('onBtn');
             logoImg.addClass('brightness');
         }else{
             menuBtn.removeClass('onBtn');
             logoImg.removeClass('brightness');
         }
-
 
         //타이틀텍스트 크기 작게
         let sec6Title = $('#section6 h2');
@@ -251,6 +242,7 @@ $(document).ready(function () {
     });
 
 
+    //nav 클릭시
 });
 
 
