@@ -645,6 +645,19 @@ h3 {
     width: 29px;
     height: 47px;
   }
+  .section2 .movetxt {
+    margin: 80px 0;
+  }
+  .section2 .road1 svg {
+    display: none;
+  }
+  .section2 .infinite {
+    position: initial;
+  }
+  .section2 .infinite .infin_logo {
+    height: 50px;
+    background-size: cover;
+  }
   .section3 {
     padding: 0 30px;
   }
@@ -669,8 +682,21 @@ h3 {
   .section3 .hire_cnt h4 {
     font-size: 20px;
   }
+  .section4 .movetxt {
+    position: initial;
+    margin: 80px 0;
+  }
+  .section4 .movetxt h2 {
+    margin: 0;
+  }
   .section4 .parallax_txt p {
     margin-bottom: 14px;
+  }
+  .section4 .road2 {
+    padding: 0;
+  }
+  .section4 .road2 svg {
+    display: none;
   }
   .section5 {
     padding-top: 50px;
@@ -735,6 +761,12 @@ h3 {
   .header {
     height: 100px;
     width: 100%;
+  }
+  .section2 .movetxt {
+    margin-bottom: 50px;
+  }
+  .section2 .infinite .infin_logo {
+    height: 30px;
   }
   .section3 .hire_cnt .txt_wrap {
     padding: 70px 15px 30px;

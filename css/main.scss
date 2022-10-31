@@ -666,6 +666,7 @@ h3{
       right: 10px;
     }
   }
+
   .section6{
     .movetxt{
       & h2.on {
@@ -692,8 +693,6 @@ h3{
     }
   }
 
-
-
 }
 
 // 반응형
@@ -706,6 +705,19 @@ h3{
     .swiper-container{
       height: 50vh !important;
       .swiper-button-prev:after, .swiper-button-next:after{ width: 29px; height: 47px;}
+    }
+  }
+  .section2{
+    .movetxt{margin: 80px 0;}
+    .road1{
+      svg{ display: none;}
+    }
+    .infinite{
+      position: initial;
+      .infin_logo{
+        height: 50px;
+        background-size: cover;
+      }
     }
   }
   .section3{
@@ -729,8 +741,17 @@ h3{
     }
   }
   .section4{
+    .movetxt{
+      position: initial;
+      margin: 80px 0;
+      h2{ margin: 0;}
+    }
     .parallax_txt p{
       margin-bottom: 14px;
+    }
+    .road2{
+      padding: 0;
+      svg{ display: none; }
     }
   }
   .section5{
@@ -790,6 +811,12 @@ h3{
     padding: 10px;
   }
   .header{height: 100px; width: 100%;}
+  .section2{
+    .movetxt{margin-bottom: 50px}
+    .infinite{
+      .infin_logo{ height: 30px; }
+    }
+  }
   .section3{
     .hire_cnt{
       .txt_wrap{
