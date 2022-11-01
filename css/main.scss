@@ -572,14 +572,12 @@ h3{
     line-height: 2.0833vw;
   }
   .section2{
-    .movetxt{
-      margin: 20.7639vw 0 6.3889vw 0;
-    }
+    .movetxt{margin-bottom: 60px;}
     .road1{
-      padding: 0 11.1111vw 0 7.0833vw;
+      padding: 0 60px 0 70px;
     }
     .infinite{
-      top: 30%;
+      top: 35%;
       margin-left: 3.3333vw;
       .infin_logo{
         height: 4.3056vw;
@@ -764,6 +762,9 @@ h3{
   .section6{
     .movetxt{
       padding-top: 45px;
+      h2.on{
+        font-size: 40px;
+      }
     }
     .client_list{
       padding: 80px 20px 40px 20px;

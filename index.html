@@ -542,18 +542,18 @@
                     const section2 = document.querySelector(".section2").clientHeight;
                     const section3 = document.querySelector(".section3").clientHeight;
                     const section4 = document.querySelector(".section4").clientHeight;
-                    console.log(section1)
 
                     if(window.scrollY < section1 + section2 + section3){
                         p_ex1.style.fontSize = '5.2vw';
                     }
-                    if(window.scrollY > section1 + section2 + section3 - 500){
+                    if(window.scrollY > section1 + section2 + section3 - 600){
                         p_ex1.style.fontSize = '6.8125vw';
                     }
-                    if(window.scrollY > section1 + section2 + section3 - 200){
+                    if(window.scrollY > section1 + section2 + section3 - 400){
                         p_ex1.style.fontSize = '9.41vw';
                     }
-                    if(window.scrollY > section1 + section2 + section3){
+                    if(window.scrollY > section1 + section2 + section3 - 300){
+                        console.log('도달');
                         p_ex1.style.fontSize = '11.02vw';
                     }
                 }, 100);

@@ -85,7 +85,6 @@ $(document).ready(function () {
             $(document).on('scroll', function(){
                 // 오감과 함께할 당신에게,
                 $('h2 .to_left').css("left", Math.max(120 - 0.1*window.scrollY, 1) + "vw");
-                $('.section6 h2 .to_left').css("left", Math.max( 380 - 0.1*window.scrollY, 1) + "vw");
                 $('h2 .to_right').css("right", Math.max(120 - 0.1*window.scrollY, 1) + "vw");
             });
 
@@ -93,7 +92,6 @@ $(document).ready(function () {
             $(document).on('scroll', function(){
                 // 오감과 함께할 당신에게,
                 $('h2 .to_left').css("left", Math.max(80 - 0.1*window.scrollY, 1) + "vw");
-                $('.section6 h2 .to_left').css("left", Math.max( 380 - 0.1*window.scrollY, 1) + "vw");
                 $('h2 .to_right').css("right", Math.max(80 - 0.1*window.scrollY, 1) + "vw");
             });
 
@@ -101,7 +99,6 @@ $(document).ready(function () {
             $(document).on('scroll', function(){ //모바일
                 // 오감과 함께할 당신에게,
                 $('h2 .to_left').css("left", Math.max(40 - 0.1*window.scrollY, 1) + "vw");
-                $('.section6 h2 .to_left').css("left", Math.max( 380 - 0.1*window.scrollY, 1) + "vw");
                 $('h2 .to_right').css("right", Math.max(40 - 0.1*window.scrollY, 1) + "vw");
             });
         }
@@ -307,7 +304,7 @@ $(document).ready(function () {
 
         //클라이언트 타이틀텍스트 크기 작게
         let sec6Title = $('#section6 h2');
-        let sec6Y = $('.top_line').offset().top + -1000;
+        let sec6Y = $('.section6').offset().top + -500;
         if(scrollVar >= sec6Y){
             sec6Title.addClass('on');
         }else{
