@@ -243,7 +243,7 @@ $(document).ready(function () {
 
 
     // 스크롤이 근처에 도달시 애니메이션 실행 - 2022.10.31 임보라 추가
-    $(window).scroll(function(){
+    /*$(window).scroll(function(){
         let scrollVar = $(this).scrollTop();
         let header = $('.header');
 
@@ -282,7 +282,7 @@ $(document).ready(function () {
                 logoImg.removeClass('brightness');
             }
 
-    });
+    });*/
 
     // section7 fade효과 - 2022.10.31 임보라 추가
     AOS.init();
@@ -292,15 +292,17 @@ $(document).ready(function () {
     $(window).scroll(function(){
 
         //메뉴버튼 흰색으로 변경
-        let sec6Top = $('.top_line').offset().top + -80;
+        let sec6Top = $('.section6').offset().top + -80;
         let sec7Top = $('.section7').offset().top + -300;
         let scrollVar = $(this).scrollTop();
-        let menuBtn = $('.nav_btn');
+        const header = $('.header');
 
         if(scrollVar >= sec6Top && scrollVar <= sec7Top){
-            menuBtn.addClass('onBtn');
+            header.addClass('change');
+            header.find('.logo img').attr('src','img/icon_logo.png');
         }else{
-            menuBtn.removeClass('onBtn');
+            header.removeClass('change');
+            header.find('.logo img').attr('src','img/icon_logo_w.png');
         }
 
         //클라이언트 타이틀텍스트 크기 작게

@@ -365,6 +365,7 @@ h3{
     li img {
       //max-height: 213px;
       max-width: 100%;
+      opacity: 75%;
     }
     li:nth-of-type(4n) {
       margin-right: 0;
@@ -810,7 +811,6 @@ h3{
     font-size: 20px;
     padding: 10px;
   }
-  .header{height: 100px; width: 100%;}
   .section2{
     .movetxt{margin-bottom: 50px}
     .infinite{

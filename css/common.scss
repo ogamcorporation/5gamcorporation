@@ -105,8 +105,16 @@ html{
   top: 0;
   left: 0;
   width: 100%; /*width: calc(100% - 112px);*/
-  height: 178px;
+  height: 130px;
   padding: 0px 100px 0 56px; /*padding: 0 56px;*/
+  background-color: rgba(0,0,0, .9);
+  &.change{
+    background-color: rgb(255,255,255, .98);
+    .nav_btn{
+      background: #000;
+      .line{ background: #ffffff;}
+    }
+  }
   .logo img{
     height: 80px;
     object-fit: contain;
@@ -120,13 +128,13 @@ html{
     position: relative;
     width: 52px;
     height: 52px;
-    background: #000;
+    background: #fff;
     border-radius: 10px;
     &.on #dim{
       display: block;
     }
     &.onBtn{
-      background: #fff;
+      background: #000;
       transition: 0.3s;
     }
     .line{
@@ -136,7 +144,7 @@ html{
       @include translateX-50;
       width: 25px;
       height: 2px;
-      background: #fff;
+      background: #000;
     }
     &.onBtn .line{
       background: #000;
@@ -352,6 +360,7 @@ footer{
 @media all and (max-width:768px){
   // header
   .header{
+    height: 80px;
     .logo img{
       height: 40px;
     }
@@ -361,6 +370,23 @@ footer{
     }
     &.bgOn{
       height: 80px;
+    }
+  }
+}
+
+@media all and (max-width: 480px){
+  .header{
+    height: 70px;
+    padding: 0 30px;
+    .logo{
+      img{ height: 35px;}
+    }
+    .nav_btn{
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      .line{ width: 15px;}
+      .line1{ top: 32%;}
     }
   }
 }
