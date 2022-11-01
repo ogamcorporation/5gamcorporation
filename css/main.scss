@@ -398,119 +398,6 @@ h3{
     }
   }
 
-
-  .portfolio_wrap {
-    display: flex;
-  }
-
-  .responsible img:first-child {
-    width: 43.5vw;
-    height: 100%;
-    margin-right: 66px;
-  }
-
-  .pc img {
-    width: 43.5vw;
-    height: 100%;
-  }
-
-  .responsible img:nth-child(2) {
-    width: 23.2vw;
-    height: 100%;
-    margin-right: 66px;
-  }
-
-  .responsible img:nth-child(3) {
-    width: 8.5vw;
-    height: 100%;
-  }
-
-  #inquiry {
-    background: #FFFFFF;
-    padding: 117px 100px 117px 100px;
-    font-family: spoqa;
-    height: auto;
-    overflow: hidden;
-    cursor: pointer;
-
-    h2 {
-      font-size: 40px;
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    h2 + p {
-      font-size: 18px;
-      line-height: 20px;
-      text-align: center;
-      margin-bottom: 38px;
-      color: #6b6b6b;
-    }
-
-    .inquiry_table {
-      width: 600px;
-      height: 300px;
-      color: #171111;
-      font-weight: 400;
-      border: 1px solid #000;
-      font-size: 20px;
-
-      input {
-        width: 100%;
-      }
-
-      textarea {
-        border: none;
-        resize: none;
-        outline: none;
-        width: 100%;
-        height: 90%;
-        font-size: 20px;
-      }
-
-      th {
-        font-weight: 700;
-      }
-
-      th, td {
-        border: 1px solid #000;
-      }
-
-      td {
-        padding: 15px 20px;
-      }
-    }
-
-    .send {
-      display: block;
-      color: #FFFFFF !important;
-      background: #000;
-      text-align: center;
-      border-radius: 15px;
-      width: 168px;
-      height: 50px;
-      margin: 20px auto;
-    }
-
-    .thankyou_message {
-      @include translate-50;
-      position: fixed;
-      z-index: 1005;
-      top: 50%;
-      left: 50%;
-
-      p {
-        background: #000;
-        font-size: 20px;
-        font-weight: 700;
-        text-align: center;
-        color: #fff;
-        padding: 40px 20px 30px;
-      }
-
-    }
-  }
-
   .loading {
     display: none;
     position: absolute;
@@ -557,6 +444,118 @@ h3{
     margin: 0 auto;
     border-bottom: 3px solid #000;
   }
+}
+
+#inquiry {
+  background: #FFFFFF;
+  padding: 117px 100px 117px 100px;
+  font-family: spoqa;
+  height: auto;
+  overflow: hidden;
+  cursor: pointer;
+
+  h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  h2 + p {
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 38px;
+    color: #6b6b6b;
+  }
+
+  .inquiry_table {
+    width: 600px;
+    height: 300px;
+    color: #171111;
+    font-weight: 400;
+    border: 1px solid #000;
+    font-size: 20px;
+
+    input {
+      width: 100%;
+    }
+
+    textarea {
+      border: none;
+      resize: none;
+      outline: none;
+      width: 100%;
+      height: 90%;
+      font-size: 20px;
+    }
+
+    th {
+      font-weight: 700;
+    }
+
+    th, td {
+      border: 1px solid #000;
+    }
+
+    td {
+      padding: 15px 20px;
+    }
+  }
+
+  .send {
+    display: block;
+    color: #FFFFFF !important;
+    background: #000;
+    text-align: center;
+    border-radius: 15px;
+    width: 168px;
+    height: 50px;
+    margin: 20px auto;
+  }
+
+  .thankyou_message {
+    @include translate-50;
+    position: fixed;
+    z-index: 1005;
+    top: 50%;
+    left: 50%;
+
+    p {
+      background: #000;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      color: #fff;
+      padding: 40px 20px 30px;
+    }
+
+  }
+}
+
+.portfolio_wrap {
+  display: flex;
+}
+
+.responsible img:first-child {
+  width: 43.5vw;
+  height: 100%;
+  margin-right: 66px;
+}
+
+.pc img {
+  width: 43.5vw;
+  height: 100%;
+}
+
+.responsible img:nth-child(2) {
+  width: 23.2vw;
+  height: 100%;
+  margin-right: 66px;
+}
+
+.responsible img:nth-child(3) {
+  width: 8.5vw;
+  height: 100%;
 }
 
 // 반응형
@@ -823,6 +822,7 @@ h3{
       .txt_wrap{
         padding: 70px 15px 30px;
         height: 320px;
+        border-radius: 50px;
         strong{font-size: 40px}
       }
       .txt_right{

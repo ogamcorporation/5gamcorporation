@@ -106,13 +106,16 @@ html{
   left: 0;
   width: 100%; /*width: calc(100% - 112px);*/
   height: 130px;
-  padding: 0px 100px 0 56px; /*padding: 0 56px;*/
+  padding: 0 56px;
   &.change{
     background-color: rgba(0,0,0, .98);
     .nav_btn{
       background: #fff;
       .line{ background: #000;}
     }
+  }
+  &.bg_w{
+    background-color: rgba(255,255,255, .98);
   }
   .logo img{
     height: 80px;
@@ -337,7 +340,7 @@ footer{
 @media all and (max-width:1024px){
   // header
   .header{
-    padding: 0 50px 0 30px;
+    padding: 0 50px;
     height: 120px;
     .logo img{
       height: 60px;

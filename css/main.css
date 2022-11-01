@@ -384,104 +384,6 @@ h3 {
   width: 169px;
   margin: 0 auto;
 }
-.section6 .portfolio_wrap {
-  display: flex;
-}
-.section6 .responsible img:first-child {
-  width: 43.5vw;
-  height: 100%;
-  margin-right: 66px;
-}
-.section6 .pc img {
-  width: 43.5vw;
-  height: 100%;
-}
-.section6 .responsible img:nth-child(2) {
-  width: 23.2vw;
-  height: 100%;
-  margin-right: 66px;
-}
-.section6 .responsible img:nth-child(3) {
-  width: 8.5vw;
-  height: 100%;
-}
-.section6 #inquiry {
-  background: #FFFFFF;
-  padding: 117px 100px 117px 100px;
-  font-family: spoqa;
-  height: auto;
-  overflow: hidden;
-  cursor: pointer;
-}
-.section6 #inquiry h2 {
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 25px;
-}
-.section6 #inquiry h2 + p {
-  font-size: 18px;
-  line-height: 20px;
-  text-align: center;
-  margin-bottom: 38px;
-  color: #6b6b6b;
-}
-.section6 #inquiry .inquiry_table {
-  width: 600px;
-  height: 300px;
-  color: #171111;
-  font-weight: 400;
-  border: 1px solid #000;
-  font-size: 20px;
-}
-.section6 #inquiry .inquiry_table input {
-  width: 100%;
-}
-.section6 #inquiry .inquiry_table textarea {
-  border: none;
-  resize: none;
-  outline: none;
-  width: 100%;
-  height: 90%;
-  font-size: 20px;
-}
-.section6 #inquiry .inquiry_table th {
-  font-weight: 700;
-}
-.section6 #inquiry .inquiry_table th, .section6 #inquiry .inquiry_table td {
-  border: 1px solid #000;
-}
-.section6 #inquiry .inquiry_table td {
-  padding: 15px 20px;
-}
-.section6 #inquiry .send {
-  display: block;
-  color: #FFFFFF !important;
-  background: #000;
-  text-align: center;
-  border-radius: 15px;
-  width: 168px;
-  height: 50px;
-  margin: 20px auto;
-}
-.section6 #inquiry .thankyou_message {
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  position: fixed;
-  z-index: 1005;
-  top: 50%;
-  left: 50%;
-}
-.section6 #inquiry .thankyou_message p {
-  background: #000;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  color: #fff;
-  padding: 40px 20px 30px;
-}
 .section6 .loading {
   display: none;
   position: absolute;
@@ -526,6 +428,110 @@ h3 {
   height: 600px;
   margin: 0 auto;
   border-bottom: 3px solid #000;
+}
+
+#inquiry {
+  background: #FFFFFF;
+  padding: 117px 100px 117px 100px;
+  font-family: spoqa;
+  height: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+#inquiry h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+#inquiry h2 + p {
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 38px;
+  color: #6b6b6b;
+}
+#inquiry .inquiry_table {
+  width: 600px;
+  height: 300px;
+  color: #171111;
+  font-weight: 400;
+  border: 1px solid #000;
+  font-size: 20px;
+}
+#inquiry .inquiry_table input {
+  width: 100%;
+}
+#inquiry .inquiry_table textarea {
+  border: none;
+  resize: none;
+  outline: none;
+  width: 100%;
+  height: 90%;
+  font-size: 20px;
+}
+#inquiry .inquiry_table th {
+  font-weight: 700;
+}
+#inquiry .inquiry_table th, #inquiry .inquiry_table td {
+  border: 1px solid #000;
+}
+#inquiry .inquiry_table td {
+  padding: 15px 20px;
+}
+#inquiry .send {
+  display: block;
+  color: #FFFFFF !important;
+  background: #000;
+  text-align: center;
+  border-radius: 15px;
+  width: 168px;
+  height: 50px;
+  margin: 20px auto;
+}
+#inquiry .thankyou_message {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 1005;
+  top: 50%;
+  left: 50%;
+}
+#inquiry .thankyou_message p {
+  background: #000;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  padding: 40px 20px 30px;
+}
+
+.portfolio_wrap {
+  display: flex;
+}
+
+.responsible img:first-child {
+  width: 43.5vw;
+  height: 100%;
+  margin-right: 66px;
+}
+
+.pc img {
+  width: 43.5vw;
+  height: 100%;
+}
+
+.responsible img:nth-child(2) {
+  width: 23.2vw;
+  height: 100%;
+  margin-right: 66px;
+}
+
+.responsible img:nth-child(3) {
+  width: 8.5vw;
+  height: 100%;
 }
 
 @media screen and (max-width: 1440px) {
@@ -771,6 +777,7 @@ h3 {
   .section3 .hire_cnt .txt_wrap {
     padding: 70px 15px 30px;
     height: 320px;
+    border-radius: 50px;
   }
   .section3 .hire_cnt .txt_wrap strong {
     font-size: 40px;

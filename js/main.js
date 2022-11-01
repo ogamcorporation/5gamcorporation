@@ -109,7 +109,7 @@ $(document).ready(function () {
 
     // section3 타이핑효과
     $(".typed").typed({
-        strings: ["Software Development", "Design&#59; Publishing", "UX &#38; UI Planning", "QA&#59; QC part", "Online Marketing"],
+        strings: ["Software Development", "Design Publishing", "UX UI Planning", "QA QC part", "Online Marketing"],
         typeSpeed: 100,
         loop: true,
     });
