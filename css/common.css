@@ -152,16 +152,15 @@ html {
   width: 100%; /*width: calc(100% - 112px);*/
   height: 130px;
   padding: 0px 100px 0 56px; /*padding: 0 56px;*/
-  background-color: rgba(0, 0, 0, 0.9);
 }
 .header.change {
-  background-color: rgba(255, 255, 255, 0.98);
+  background-color: rgba(0, 0, 0, 0.98);
 }
 .header.change .nav_btn {
-  background: #000;
+  background: #fff;
 }
 .header.change .nav_btn .line {
-  background: #ffffff;
+  background: #000;
 }
 .header .logo img {
   height: 80px;
@@ -176,15 +175,11 @@ html {
   position: relative;
   width: 52px;
   height: 52px;
-  background: #fff;
+  background: #000;
   border-radius: 10px;
 }
 .header .nav_btn.on #dim {
   display: block;
-}
-.header .nav_btn.onBtn {
-  background: #000;
-  transition: 0.3s;
 }
 .header .nav_btn .line {
   position: absolute;
@@ -197,7 +192,7 @@ html {
   transform: translateX(-50%);
   width: 25px;
   height: 2px;
-  background: #000;
+  background: #fff;
 }
 .header .nav_btn.onBtn .line {
   background: #000;

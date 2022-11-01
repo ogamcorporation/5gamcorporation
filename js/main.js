@@ -285,27 +285,37 @@ $(document).ready(function () {
     AOS.init();
 
 
-    // 스크롤이 section6 도달시 - 2022.10.28 임보라 추가
+    // 스크롤이 시작하면 header변경
+
     $(window).scroll(function(){
 
         //메뉴버튼 흰색으로 변경
+        const header = $('.header');
+        let headerH = header.height();
+        let scrollTop = $(this).scrollTop();
         let sec6Top = $('.section6').offset().top + -80;
         let sec7Top = $('.section7').offset().top + -300;
-        let scrollVar = $(this).scrollTop();
-        const header = $('.header');
 
-        if(scrollVar >= sec6Top && scrollVar <= sec7Top){
+        if(scrollTop >=headerH){
             header.addClass('change');
-            header.find('.logo img').attr('src','img/icon_logo.png');
+            header.find('.logo img').attr('src','img/icon_logo_w.png');
+            header.css('background-color', 'rgba(0,0,0,.98)')
         }else{
             header.removeClass('change');
-            header.find('.logo img').attr('src','img/icon_logo_w.png');
+            header.find('.logo img').attr('src','img/icon_logo.png');
+            header.css('background-color', 'transparent')
         }
+        if(scrollTop >= sec6Top && scrollTop <= sec7Top){
+            header.removeClass('change');
+            header.find('.logo img').attr('src','img/icon_logo.png');
+            header.css('background-color', 'rgba(255,255,255,.98)')
+        }
+
 
         //클라이언트 타이틀텍스트 크기 작게
         let sec6Title = $('#section6 h2');
         let sec6Y = $('.section6').offset().top + -500;
-        if(scrollVar >= sec6Y){
+        if(scrollTop >= sec6Y){
             sec6Title.addClass('on');
         }else{
             sec6Title.removeClass('on');
