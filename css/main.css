@@ -751,6 +751,9 @@ h3 {
   #inquiry {
     padding: 90px 60px 90px 60px;
   }
+  #inquiry .inquiry_table {
+    width: 450px;
+  }
   footer {
     padding: 45px 56px 56px;
   }
