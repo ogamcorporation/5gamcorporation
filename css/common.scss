@@ -322,7 +322,7 @@ footer{
 // #modal
 #dim, #dim2,.md_cnt{position: fixed;z-index: 1000;}
 #dim, #dim2{display: none;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.5);}
-.md_cnt{top: 50%;left: 50%;transform: translate(-50%, -50%);background: #C0C0C0;padding: 5.2vw 6vw;visibility: hidden;overflow-y: auto;height: 90vh;}
+.md_cnt{top: 50%;left: 50%;transform: translate(-50%, -50%);background: #C0C0C0;padding: 50px;visibility: hidden;overflow-y: auto;height: 90vh;}
 .md_close_btn{position: absolute;top: 20px;right: 20px;width: 24px;height: 24px;background: url(../img/icon_close_btn.png) no-repeat center / contain;}
 .md_close_btn.btn_black{background: url(../img/icon_close_btn_black.png) no-repeat center / contain !important;}
 

@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function () {
 
     // .section1 스와이퍼
@@ -287,7 +284,6 @@ $(document).ready(function () {
 
 
     // 스크롤이 시작하면 header변경
-
     $(window).scroll(function(){
 
         //메뉴버튼 흰색으로 변경
@@ -324,7 +320,10 @@ $(document).ready(function () {
     });
 
 
-    //nav 클릭시
+    $('#number').on('input', function (){
+        $(this).val($(this).val().replace(/[^0-9]$/,''));
+    })
+
 });
 
 
