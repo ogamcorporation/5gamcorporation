@@ -14,6 +14,13 @@ $(document).ready(function() {
   3-2) 열려진 모달을 제외한 나머지에 스크린리더 접근 허용: aria-hidden, inert을 제거
   4) 모달열기 버튼에 포커스 강제 이동
   */
+$(window).resize(function(){
+    if (window.innerWidth < 1024){
+        $('.section5 .swiper-slide').each(function () {
+            $(this).removeClass('md_open_btn');
+        })
+    }
+}).resize();
  $('.md_open_btn').on('click', function () {
    // 1) 변수선언 : 열기버튼, 열려질 상세 모달 내용, 닫기버튼, 포커스를 처음가질 요소, 포커스를 마지막에 가질 요소
     const $openBtn = $(this);
@@ -87,4 +94,6 @@ $(document).ready(function() {
  $('.md_close_btn.btn_black').click(function () {
      location.reload();
  });
+
+
 });
